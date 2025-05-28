@@ -1,0 +1,26 @@
+
+<div class="left">
+	<a href="/" class="home" aria-label="Home">
+		<object data="/svg/alexkademan-bg6.svg" type="image/svg+xml"></object>
+	</a>
+	<ul class="main-nav">
+		<li>
+			<a href="/">
+				<span webc:if="section === 'work'" class="selected">Work</span>
+				<span webc:else  class="not-selected">Work</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="resume.webc">
+				<span webc:if="section === 'resume'" class="selected">Résumé</span>
+				<span webc:else  class="not-selected">Résumé</span>
+			</a>
+		</li>	
+	</ul>
+</div>
+
+
+<!-- <div class="right">
+	<a href="#">the thing</a>
+</div> -->

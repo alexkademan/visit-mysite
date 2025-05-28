@@ -1,0 +1,75 @@
+---js
+// Initialize page data in JavaScript front matter
+let title = "Home";
+// let url = `${metadata.url}${page.url}`;
+---
+
+<!doctype html>
+<html :lang="metadata.language">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title @text="title || metadata.title"></title>
+
+		<meta name="generator" :content="eleventy.generator">
+		<meta property="og:type" content="website">
+		<meta property="og:url" :content="metadata.url+page.url">
+		<meta property="og:image" content="/images/og-image-alex-kademan.gif"> 
+		<meta property="og:title" :content="title+' • '+metadata.title"> 
+		<meta property="og:description" :content="metadata.description"> 
+
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+		<meta name="description" :content="description || metadata.description">
+		<meta name="generator" :content="eleventy.generator">
+		<link rel="stylesheet" href="/css/reset.css" webc:keep>
+		<!--- This is rolled into the bundle. --->
+		<link rel="stylesheet" href="/css/base.css" webc:keep>
+		<link rel="stylesheet" href="/css/work.css" webc:keep>
+		<style webc:keep @raw="getBundle('css')"></style>
+	</head>
+	<body>		
+		<header class="main-header">
+			<nav class="main-column-wide"  aria-labelledby="main-navigation">
+				<masthead :section="section"></masthead>
+			</nav>
+		</header>
+		
+		<!-- <h1 class="main-column" @text="metadata.description"></h1> -->
+		<div  @attributes="({ class: section+' white-bg' })">
+			<main @raw="content"></main>
+		</div>
+
+		<footer class="main-footer main-column-wide">
+			<div class="footer-icon">
+				<div class="left">
+					<div class="copyright">
+						<div class="title">
+							&copy;<em webc:nokeep @text="(new Date()).getFullYear()"></em> 
+							<span @text="metadata.title"></span>
+						</div>
+						<div class="contact-icons">
+							<footer-icons></footer-icons>
+						</div>
+					</div>
+				</div>
+				<footer-ak-icon></footer-ak-icon>
+			</div>
+
+
+			
+		</footer>
+
+		<script type="module" webc:keep @raw="getBundle('js')"></script>
+	</body>
+</html>
+
+<script>
+	console.log(window.location.href.substring(0, window.location.href.lastIndexOf("/")));
+	console.log(window.location.href);
+	console.log(document.URL.substr(0,document.URL.lastIndexOf('/')));
+	console.log(window.location.origin);
+	console.log(window.location.pathname);
+	const pathName = window.location.pathname;
+	console.log(pathName.replace(/\/+$/, ""));
+</script>

@@ -1,0 +1,41 @@
+import pluginWebc from "@11ty/eleventy-plugin-webc";
+import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+
+/** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
+export default function(eleventyConfig) {
+	eleventyConfig.ignores.add("README.md");
+
+	eleventyConfig.addPlugin(pluginWebc, {
+		components: [
+			"./_components/**/*.webc",
+			"npm:@11ty/is-land/*.webc"
+		]
+	});
+
+	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+
+	eleventyConfig.setServerOptions({
+		domDiff: false
+	});
+
+	eleventyConfig.addPassthroughCopy("./content/fonts/DMSerifDisplay-Regular.woff2");
+	eleventyConfig.addPassthroughCopy("./content/fonts/LibreCaslonText-Bold.woff2");
+	eleventyConfig.addPassthroughCopy("./content/fonts/Lato-Light.woff2");
+	eleventyConfig.addPassthroughCopy("./content/fonts/Lato-LightItalic.woff2");
+	eleventyConfig.addPassthroughCopy("./content/fonts/Lato-Regular.woff2");
+	eleventyConfig.addPassthroughCopy("./content/fonts/Lato-Black.woff2");
+
+	eleventyConfig.addPassthroughCopy("./content/svg/alexkademan-bg6.svg");
+	
+	eleventyConfig.addPassthroughCopy("./content/css/reset.css");
+	eleventyConfig.addPassthroughCopy("./content/css/base.css");
+	eleventyConfig.addPassthroughCopy("./content/css/work.css");
+};
+
+export const config = {
+	dir: {
+		input: "content",          // default: "."
+		includes: "../_includes",  // default: "_includes"
+		data: "../_data",          // default: "_data"
+	}
+};
