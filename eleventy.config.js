@@ -26,7 +26,12 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./content/fonts/Lato-Black.woff2");
 
 	eleventyConfig.addPassthroughCopy("./content/svg/alexkademan-bg6.svg");
-	
+	eleventyConfig.addPassthroughCopy("./content/svg/ak-logomark.svg");
+	eleventyConfig.addPassthroughCopy("./content/svg/footer-ak-icon.svg");
+	eleventyConfig.addPassthroughCopy("./content/images/og-image-alex-kademan.gif");
+	eleventyConfig.addPassthroughCopy("./content/images/favicon.png");
+	eleventyConfig.addPassthroughCopy("./content/images/favicon.ico");
+
 	eleventyConfig.addPassthroughCopy("./content/css/reset.css");
 	eleventyConfig.addPassthroughCopy("./content/css/base.css");
 	eleventyConfig.addPassthroughCopy("./content/css/work.css");
