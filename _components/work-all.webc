@@ -1,31 +1,10 @@
----js
-// Initialize page data in JavaScript front matter
-let section = "work";
----
-<div class="home-title">
-	<div class="main-column-wide">
 
-		<div class="wide three-title-col homepage-intro">
-			<div class="col-1">
-				<h1>Web Designer, <br>Web Developer,<br />Graphic Designer</h1>
-			</div>
-			<div class="col-2">
-				<span class="intro-text">
-					<p>
-						I am a senior designer who specializes in both web and print design. My nearly two decades of experience inform my approach to my work with a deep foundation of wisdom, paired with an ever curious eye to future developments in the industry.
-					</p>
-					<p>
-						I build things with care, and love what I build. 
-					</p>
-				</span>
-			</div>
-		</div>
-	</div>
-</div>
-
-<section class="work-page page-full">
+<div class="work-page page-full">
 	<h1 @raw="title" class="page-title visually-hidden"></h1>
-	<div class="work-grid">		
+	<div class="work-grid">
+
+		<div class="grid-title visually-hidden"><h2>Title Here?</h2></div>
+		
 		<div class="work-module">
 			<a href="/work/smartlivinghg/smartlivinghg.webc" class="work-link">
 				<div class="img-wrapper">
@@ -38,7 +17,7 @@ let section = "work";
 				</div>
 				<h3>Smart Living Home &amp; Garden</h3>
 			</a>
-		</div>		
+		</div>
 		<div class="work-module">
 			<a href="/work/solfulfitness/solfulfitness.webc" class="work-link">
 				<div class="img-wrapper">
@@ -117,45 +96,27 @@ let section = "work";
 				<h3>Gauthier Biomedical</h3>
 			</a>
 		</div>
-		
 	</div>
-</section>
+</div>
 
 
 <style>
-
-	@keyframes fadeInH1 {
-		from {
-			transform: translateY(10%);
-			opacity: 0;
-		}
-
-		to {
-			transform: translateY(0%);
-			opacity: 1;
-		}
-
-	}
-	.homepage-intro {
-		h1 {
-			opacity: 0;
-			animation: fadeInH1 .5s .5s forwards;
-			animation-timing-function: ease-out;
-		}
-
-		.intro-text {
-			display: inline-block;
-			opacity: 0;
-			animation: fadeInH1 1.2s 1s forwards;
-			animation-timing-function: ease-out;
-		}
-	}
-
 	.work-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 1em;
-		padding: 1em 1rem 8em;
+		padding: 0 1rem 8em;
+
+		.grid-title {
+			grid-column: 1 / 3;
+			display: block;
+			border-bottom: 1px var(--deep-slate-blue) solid;
+
+			h2 {
+				font-family: lato;
+				text-align: right;
+			}
+		}
 
 		.work-module {
 			grid-column: 1 /3;
@@ -170,17 +131,15 @@ let section = "work";
 		overflow: hidden;
 		display: block;
 		position: relative;
-		aspect-ratio: 4 / 3;
-		background-color: deeppink;
 	}
 
 	.image-wrapper,
 	.work-image {
+		display: flex;
 		overflow: hidden;
 		background-color: #F4F4F4;
 	}
 	.work-image {
-		display: flex;
 		width: 100%;
 		transition: 0.3s;
 		filter: contrast(1.2) saturate(0);
@@ -202,14 +161,11 @@ let section = "work";
 		text-decoration: none;
 	}
 
+
 	.work-link .work-image-front,
 	.work-link .work-image-back {
-		position: absolute;
-		left: 0;
-		top: 0;
 		display: flex;
 		width: 100%;
-		height: 100%;
 		transition: 0.3s;
 		filter: contrast(1.2) saturate(0);
 	}
@@ -266,7 +222,6 @@ let section = "work";
 
 	@media only screen and (min-width: 800px) {
 		.work-grid {
-			padding-top: 1.5em;
 			gap: 1.5em;
 
 			.work-module {
@@ -278,58 +233,4 @@ let section = "work";
 		}
 	}
 
-	.home-title {
-		background-color: var(--off-white);
-
-		.main-column-wide {
-			padding-top: 0;
-			padding-bottom: 0;
-		}
-	}
-
-
-
-	.three-title-col {
-		display: grid;
-		gap: .25em;
-		grid-template-columns: 1fr;
-		align-items: center;
-		padding-top: 1.5em;
-		padding-bottom: 1.5em;
-
-		h1 {
-			font-family: "lato";
-		}
-
-		p {
-			padding: .5em 0;
-		}
-	}
-	
-	@media only screen and (min-width: 1100px) {
-		.three-title-col {
-			grid-template-columns: 1fr 1fr 1fr;
-			padding-top: .5em;
-			gap: .5em;
-
-			padding-top: 5em;
-			padding-bottom: 5em;
-			min-height: 40vh;
-
-			.col-2 {
-				grid-column: 2 / 4;
-			}
-
-			p {
-				max-width: 44em;
-			}
-		}
-	}
-
-	@media only screen and (min-width: 1200px) {
-		.three-title-col {
-			padding-top: .75em;
-			gap: .75em;
-		}
-	}
 </style>

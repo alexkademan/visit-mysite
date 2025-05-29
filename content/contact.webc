@@ -1,0 +1,26 @@
+---js
+function permalink(data) {
+	return "/contact/";
+}
+let title = "Work Title FROM FRONTMATTER";
+let section = "contact";
+---
+
+<h1>Work</h1>
+
+
+<br />
+uhm
+<br />
+<div @raw="title" :class="title" @attributes="({ myattribute: 'myValue'})"></div>?
+<br />
+<br />
+<br />
+<div @raw="section" @attributes="({ class: section })"></div>?
+<br />
+
+<p>this is the work page that I have installed to the website.....</p>
+
+<hello-component place="world"></hello-component>
+
+<p><a href="index.webc">Go back</a>.</p>

@@ -1,0 +1,83 @@
+---js
+function permalink(data) {
+	return "/work/solfulfitness/";
+}
+let title = "Solful Fitness";
+let section = "work";
+---
+
+<div class="whole-window whole-width-img">
+	<div class="whole-width-img-container">
+		
+		<img src="/work/solfulfitness/images/solful-header.jpg" class="work-image" alt="Smart Living website on laptop" loading="lazy" />
+		<div class="centered-section">
+			<div class="main-column-wide">
+				<h1>Solful<br />Fitness</h1>
+			</div>
+		</div>
+
+		
+	</div>
+</div>
+
+<div class="main-column-wide">
+	<div class="two-col-grid">
+		<div class="left">
+			<h2>Lead Designer</h2>
+
+			<h1>Web Design</h1>
+			<ul>
+				<li>Web Development</li>
+				<li>Web Design</li>
+			</ul>
+
+			<a href="https://www.solfulfitness.com/" target="_blank">
+				<button>Visit Website</button>
+			</a>
+			
+		</div>
+		<div class="right">
+			<h2>Overview</h2>
+			<p>
+				Solful Fitness is a website that I have designed and maintained for almost my entire career. It has gone through may iterations, and spanned several different CMSs.
+			</p>
+			<p>
+				These days it is hosted as a squarespace theme that has caused me no small ammount of stress to keep everything working within the confines of Squarespace's walled garden. 
+			</p>
+			<p>
+				Still, the client is always right, and they appreciate what squarespace has to offer.
+			</p>
+			<p>
+				After all of the different versions, the site has never looked better.
+			</p>
+
+		</div>
+
+	</div>
+
+	<div class="two-col-img-grid">
+		<span class="wide">
+			<img src="/work/solfulfitness/images/outdoor-workout.jpg" class="work-image" alt="Smart Living website on iPad" loading="lazy" class="wide" />
+		</span>
+	</div>
+
+	<div class="two-col-img-grid pagination">
+		<div class="previous">
+			<a href="/work/smartlivinghg/smartlivinghg.webc">
+				<span class="arr"><pagination-left-arrow></pagination-left-arrow></span>
+				<span class="title">Smart Living Home &amp; Garden</span>
+			</a>
+		</div>
+		<div class="next">
+			<a href="/work/pebblelaneliving/pebblelaneliving.webc"">
+				<span class="title">Pebble Lane Living</span>
+				<span class="arr"><pagination-right-arrow></pagination-right-arrow></span>
+			</a>
+		</div>
+	</div>
+
+</div>
+
+<style>
+	
+</style>

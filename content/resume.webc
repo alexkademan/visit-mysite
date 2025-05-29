@@ -1,0 +1,219 @@
+---js
+function permalink(data) {
+	return "/resume/";
+}
+let title = "Alex Kademan";
+let section = "resume";
+---
+<article class="resume resume-sheet main-column">
+	<section class="heading">
+		<h1 @raw="title" class="name"></h1>
+		<p class="job-title">Web Designer <span class="bullet">•</span> Milwaukee, WI</p>
+		<contact-icons></contact-icons>
+	</section>
+	<section class="summary">
+		<h2>About Me</h2>
+		<p>
+			Graphic Designer with nearly twenty years of experience in print and web design. Skilled in Adobe Illustrator, InDesign and Photoshop as well as JavaScript, Node.js, React, HTML5, CSS3, PHP and MySQL. Always looking to learn more about the changing landscape of web development. Expert in visual design, with a Bachelor of Arts focused in Graphic Design and Typography from the University of Wisconsin-Milwaukee.
+		</p>
+	</section>
+	<section class="experience">
+		<h2>Experience</h2>
+		<ol class="timeline">
+			<li class="job">
+				<hgroup class="title">
+					<small class="time">May 2020 - April 2025</small>
+					<h3>Senior Designer</h3>
+					<h4>Smart Living Home &amp; Garden <span class="bullet">•</span> Remote</h4>
+				</hgroup>
+				<ul class="tasks">
+					<li>Plan, design, build and maintain the company e-commerce website using different shopping cart CMS applications over time.</li>
+					<li>Write and maintain all custom JavaScript, CSS, template files for both front end and back.</li>
+					<li>Create and maintain several custom front-end and back-end plugins as needed for the website.</li>
+					<li>MySQL installation, oversight and maintenance.</li>
+					<li>Web server configuration and management (Apache VPS).</li>
+					<li>Designed numerous logos as company developed new products that needed naming and online marketing efforts.</li>
+					<li>Packaging design and pre-press coordination.</li>
+				</ul>
+			</li>
+			<li class="job">
+				<hgroup class="title">
+					<small class="time">June 2006 - May 2020</small>
+					<h3>Web/Graphic Designer</h3>
+					<h4>Modus Design, Inc. <span class="bullet">•</span> Milwaukee</h4>
+				</hgroup>
+				<ul class="tasks">
+					<li>Designed, deployed and oversaw multiple e-commerce websites.</li>
+					<li>Contribited to collaborative logo design and branding efforts.</li>
+					<li>Frequently met clients, and participated in pitch meetings.</li>
+					<li>Custom Wordpress design, development and maintenance.</li>
+					<li>Jekyll website development.</li>
+					<li>Oversight of packaging design, layout and pre-press.</li>
+					<li>Development of web and print collateral for marketing purposes.</li>
+					<li>Configured and administered office email addresses.</li>
+					<li>Maintained office's internal file server systems and backups.</li>
+				</ul>
+			</li>
+		</ol>
+	</section>
+	<section class="education">
+		<h2>Education</h2>
+		<ol class="timeline">
+			<li class="job">
+				<hgroup class="school">
+					<small class="time">Sept 2002 - May 2006</small>
+					<h3>Bachelor of Arts (B.A.), Graphic Design</h3>
+					<h4>University of Wisconsin-Milwaukee</h4>
+				</hgroup>
+			</li>
+
+		</ol>
+	</section>
+	<section class="skills">
+		<h2>Skills</h2>
+		<ul class="skills-list">
+			<skills-icons></skills-icons>
+		</ul>
+	</section>
+</article>
+
+<style>
+	.resume-sheet {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25em;
+	}
+
+	.resume-sheet .heading {
+		h1,
+		h3 {
+			padding-bottom: 0;
+		}
+
+		.job-title {
+			padding-bottom: 0;
+
+			.bullet {
+				font-family: lato;
+				color: #CCC;
+			}
+		}
+	}
+
+	.summary p:last-child {
+		padding-bottom: 0;
+	}
+
+	.timeline {
+		display: block;
+		margin: 0 1em 0 .5em;
+		padding-left: 1.75em;
+		border-left: 1px var(--terra-cotta) solid;
+		position: relative
+	}
+	
+	.timeline::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -.5em;
+		background-color: white;
+		width: 1em;
+		height: 2em;
+	}
+
+	.timeline::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: -.5em;
+		background-color: white;
+		width: 1em;
+		height: .6em;
+	}
+
+	.timeline .bullet {
+		font-size: smaller;
+		color: #CCC;
+	}
+
+	.timeline .job {
+		position: relative;
+		margin-bottom: 1.5em;
+	} 
+
+	.timeline .job:last-child {
+		margin-bottom: 0;
+	}
+
+	.timeline .job .title {
+		padding: 0 0 .75em;
+	}
+
+	.timeline .job::before {
+		position: absolute;
+		top: 1.85em;
+		left: -2.25em;
+		content: "";
+		display: block;
+		width: 1em;
+		height: 1em;
+		border-radius: 2em;
+		background-color: var(--terra-cotta);
+	}
+
+	.timeline .job .time {
+		font-size: smaller;
+		display: inline-block;
+		line-height: 1em;
+		padding-top: 0;
+		padding-bottom: .5em;
+	}
+
+	.timeline .job h3 {
+		padding: 0 0 .125em;
+	}
+
+	.timeline .job h4 {
+		font-family: lato;
+		font-size: 1.0em;
+
+	}
+
+	.timeline .tasks {
+		padding: 0 0 0 1.25em;
+		list-style-type: circle;
+		list-style-type: disc;
+	}
+
+	.timeline .tasks li {
+		padding-bottom: .5em;
+	}
+
+	.skills-list {
+		display: flex;
+		flex-direction: row;
+		font-size: smaller;
+		align-content: start;
+		gap: .5em;
+	}
+	
+	.skills-list li {
+		display: flex;
+		padding: .125em  .5em;
+		background-color: transparent;
+		border: 1px #CCC solid;
+		border-radius: .25em;
+	}
+
+	.skills-list li svg {
+		display: inline-block;
+		margin-right: .25em;
+		width: 1em;
+		fill: var(--terra-cotta);
+		fill: var(--deep-slate-blue);
+	}
+
+</style>

@@ -1,0 +1,10 @@
+---js
+function permalink(data) {
+	return "/work/";
+}
+let title = "Work";
+let section = "work";
+---
+
+<work-all></work-all>
+ 

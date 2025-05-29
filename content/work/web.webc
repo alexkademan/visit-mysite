@@ -1,0 +1,11 @@
+---js
+function permalink(data) {
+	return "/work/web/";
+}
+let section = "work";
+---
+<p>Websites that I have done.</p>
+
+<hello-component place="world"></hello-component>
+
+<p><a href="index.webc">Go back</a>.</p>

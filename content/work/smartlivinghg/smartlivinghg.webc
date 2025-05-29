@@ -1,0 +1,134 @@
+---js
+function permalink(data) {
+	return "/work/smartlivinghg/";
+}
+let title = "Smart Living Home &amp; Garden";
+let section = "work";
+---
+
+<div class="whole-window whole-width-img">
+	<div class="whole-width-img-container">
+		
+		<img src="/work/smartlivinghg/images/smart-living-header.jpg" class="work-image" alt="Smart Living website on laptop" loading="lazy" />
+		<div class="centered-section">
+			<div class="main-column-wide">
+				<h1>Smart Living<br />Home &amp; Garden</h1>
+			</div>
+		</div>
+
+		
+	</div>
+</div>
+
+<div class="main-column-wide">
+	<div class="two-col-grid">
+		<div class="left">
+			<h2>Lead Designer</h2>
+
+			<h1>Web Design,<br />Development,<br />+ Graphic Design</h1>
+			<ul>
+				<li>Branding</li>
+				<li>E-Commerce Theme Development</li>
+				<li>E-Commerce App Customization</li>
+				<li>Packaging Design</li>
+				<li>Print Design Services</li>
+			</ul>
+
+			<a href="https://smartlivinghg.com/" target="_blank">
+				<button>Visit Website</button>
+			</a>
+			
+		</div>
+		<div class="right">
+			<h2>Overview</h2>
+			<p>
+				Smart Living Home &amp; Garden is an online retailer specializing in outdoor decor. I worked as their head of all things print and web design.
+			</p>
+			<p>
+				I've personally overseen the design and development of their online store as it moved between different e-commerce platforms. 
+			</p>
+			<p>
+				The website has been carefully curated from it's humble beginnings as a neatly crafted PHP application, with a single six mile tall CSS file. Later weathering the wild-west era of warring JavaScript frameworks, eventually moving to it's existing form as a well optimized, accessible, and responsive e-commerce mainstay.
+			</p>
+
+		</div>
+
+	</div>
+
+
+	<div class="two-col-img-grid">
+		<span class="wide">
+			<img src="/work/smartlivinghg/images/website-iPad-03.jpg" class="work-image" alt="Smart Living website on iPad" loading="lazy" class="wide" />
+		</span>
+		<img src="/work/smartlivinghg/images/website-modals-01.jpg" class="work-image" alt="Smart Living pop up ads" loading="lazy" />
+		<img src="/work/smartlivinghg/images/website-pages-01.jpg" class="work-image" alt="Smart Living website page layouts" loading="lazy" />
+
+		<div class="wide three-logos">
+			<div class="logo logo-1">
+				<smart-living-logo-white-svg></smart-living-logo-white-svg>
+			</div>
+			<div class="logo logo-2">
+				<smart-living-logo-white-svg></smart-living-logo-white-svg>
+			</div>
+			<div class="logo logo-3">
+				<smart-living-logo-white-svg></smart-living-logo-white-svg>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="two-col-grid">
+		<div class="left">
+			<h2>Print Collateral</h2>
+
+			<h1>
+				Annual Catalog<br />
+				+ Packaging
+			</h1>
+			<ul>
+				<li>Catalog Layout</li>
+				<li>Annual Updates of Catalog</li>
+				<li>Box Layouts + Print Prep.</li>
+			</ul>
+		</div>
+		<div class="right">
+			<h2>Overview</h2>
+			<p>
+				Original design, and annual update to 75+ page catalog.
+			</p>
+			<p>
+				Created all packaging design, and all print collateral for Smart Living Home &amp; Garden since 2020.
+			</p>
+			<p>&ast; Company operated under the brand name 'Smart Solar' prior to it's current name. </p>
+		</div>
+
+	</div>
+
+	<div class="two-col-img-grid">
+		<span class="wide">
+			<img src="/work/smartlivinghg/images/smart-living-catalog-cover-01.jpg" class="work-image" alt="Smart Living catalog" loading="lazy" class="wide" />
+		</span>
+		<img src="/work/smartlivinghg/images/print-01.jpg" class="work-image" alt="Smart Living packaging" loading="lazy" />
+		<img src="/work/smartlivinghg/images/print-02.jpg" class="work-image" alt="Smart Living packaging" loading="lazy" />
+	</div>
+
+	<div class="two-col-img-grid pagination">
+		<div class="previous">
+			<a href="/work/gauthier/gauthier.webc">
+				<span class="arr"><pagination-left-arrow></pagination-left-arrow></span>
+				<span class="title">Gauthier Biomedical</span>
+			</a>
+		</div>
+		<div class="next">
+			<a href="/work/solfulfitness/solfulfitness.webc"">
+				<span class="title">Solful Fitness</span>
+				<span class="arr"><pagination-right-arrow></pagination-right-arrow></span>
+			</a>
+		</div>
+	</div>
+
+</div>
+
+<style>
+	
+</style>

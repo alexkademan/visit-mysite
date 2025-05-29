@@ -1,0 +1,133 @@
+---js
+function permalink(data) {
+	return "/work/cedarcrest/";
+}
+let title = "Cedar Crest Ice Cream";
+let section = "work";
+---
+
+<div class="whole-window whole-width-img">
+	<div class="whole-width-img-container">
+		
+		<img src="/work/cedarcrest/images/cedar-crest-grocery-store.jpg" class="work-image" alt="Cedar Crest Summerfest" loading="lazy" />
+		<div class="centered-section">
+			<div class="main-column-wide">
+				<h1>Cedar Crest<br />Ice Cream</h1>
+			</div>
+		</div>
+
+		
+	</div>
+</div>
+
+<div class="main-column-wide">
+	<div class="two-col-grid">
+		<div class="left">
+			<h2>Visual Branding</h2>
+
+			<h1>Logo Design,<br />+ Brand Management</h1>
+			<ul>
+				<li>Branding</li>
+				<li>Packaging Design</li>
+				<li>Print Design Services</li>
+			</ul>
+		</div>
+		<div class="right">
+			<h2>Overview</h2>
+			<p>
+				Cedar Crest came to us in need of a re-branding effort. We re-designed their logo, gave them a new color scheme, and designed all of their next wave of packaging and print collateral.
+			</p>
+		</div>
+
+	</div>
+
+
+	<div class="two-col-img-grid">
+		<span class="wide">
+			<img src="/work/cedarcrest/images/cc-branding.jpg" class="work-image" alt="Cedar Crest collage" loading="lazy" class="wide" />
+		</span>
+
+		<div class="wide three-col cedar-crest-3-col">
+			<div class="three-col-column col-1">
+				<cc-parlor-logo></cc-parlor-logo>
+			</div>
+			<div class="three-col-column col-2">
+				<cc-retail-logo></cc-retail-logo>
+			</div>
+			<div class="three-col-column col-3">
+				<cc-universal-logo></cc-universal-logo>
+			</div>
+		</div>
+	</div>
+
+	<div class="two-col-grid">
+		<div class="left">
+			<h2>Visual Branding</h2>
+
+			<h1>Commissioned Photography<br />+ Photo Re-Touching</h1>
+			<ul>
+				<li>Commissioned Studio Photography</li>
+				
+			</ul>
+		</div>
+		<div class="right">
+			<h2>Overview</h2>
+			<p>
+				This client required a lot of studio photography, and even more time spent re-touching to make everything look perfect.
+			</p>
+			<p>
+				Despite working with top-notch food stylists and excellent photographers, the ice cream and sherbet that we had photographed still needed to be meticulously worked in Photoshop. In order to prepare for all future design work, we needed to put in the time to make each image look more real than real.
+			</p>
+		</div>
+	</div>
+
+	<div class="two-col-img-grid">
+		<span class="wide">
+			<img src="/work/cedarcrest/images/cc-scoops.jpg" class="work-image" alt="Cedar Crest scoops" loading="lazy" class="wide" />
+		</span>
+
+		<img src="/work/cedarcrest/images/cc-pint.jpg" class="work-image" alt="Cedar Crest pints" loading="lazy" />
+		<img src="/work/cedarcrest/images/cc-freezer.jpg" class="work-image" alt="Cedar Crest freezer" loading="lazy" />
+		<img src="/work/cedarcrest/images/cc-truck.jpg" class="work-image" alt="Cedar Crest truck" loading="lazy" />
+		<img src="/work/cedarcrest/images/cc-sherbet.jpg" class="work-image" alt="Cedar Crest sherbet" loading="lazy" />
+	</div>
+	<div class="two-col-img-grid pagination">
+		<div class="previous">
+			<a href="/work/sani-t/sani-t.webc">
+				<span class="arr"><pagination-left-arrow></pagination-left-arrow></span>
+				<span class="title">Sani-t</span>
+			</a>
+		</div>
+		<div class="next">
+			<a href="/work/gauthier/gauthier.webc">
+				<span class="title">Gauthier Biomedical</span>
+				<span class="arr"><pagination-right-arrow></pagination-right-arrow></span>
+			</a>
+		</div>
+	</div>	
+</div>
+
+<style>
+	.cedar-crest-3-col {
+		svg {
+			display: block;
+			margin: 0 auto;
+			width: 85%;
+			padding: 3em 0;
+		}
+		
+		.col-1 {
+			background-color: rgb(0 164 228);
+		}
+		.col-2 {
+			background-color: rgb(84 48 26);
+			background-color: rgb(244 144 175);
+		}
+		.col-3 {
+			background-color: rgb(244 144 175);
+			background-color: rgb(84 48 26);
+			background-color: rgb(0 164 228);
+			background-color: rgb(247 158 29);
+		}
+	}
+</style>

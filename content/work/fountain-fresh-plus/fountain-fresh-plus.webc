@@ -1,0 +1,138 @@
+---js
+function permalink(data) {
+	return "/work/fountain-fresh-plus/";
+}
+let title = "Fountain Fresh +";
+let section = "work";
+---
+
+<div class="whole-window whole-width-img">
+	<div class="whole-width-img-container">
+		
+		<img src="/work/fountain-fresh-plus/images/fountain-fresh-header.jpg" class="work-image" alt="Smart Living Laptop" loading="lazy" />
+		<div class="centered-section">
+			<div class="main-column-wide">
+				<h1>Fountain<br /> Fresh Plus</h1>
+			</div>
+		</div>
+
+		<div class="header-logo-svg">
+			<div class="center-svg">
+				<div class="big-logo">
+					<fountain-fresh-header></fountain-fresh-header>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="main-column-wide">
+	<div class="two-col-grid">
+		<div class="left">
+			<h2>Lead Designer</h2>
+
+			<h1>Logo Design,<br />Packaging,<br />+ Branding</h1>
+		</div>
+		<div class="right">
+			<h2>Overview</h2>
+			<p>
+				I created the logo, label and box for Smart Living Home &amp; Garden's water purifying solution called Fountain Fresh Plus.
+			</p>
+		</div>
+	</div>
+	<div class="two-col-img-grid">
+		<span class="wide">
+			<img src="/work/fountain-fresh-plus/images/ff-action-shot.jpg" class="work-image" alt="Fountain Fresh Plus bottle" loading="lazy" class="wide" />
+		</span>
+		
+		<div class="wide three-col cedar-crest-3-col">
+			<div class="three-col-column col-1">
+				<img src="/work/fountain-fresh-plus/images/bottle-photo-4.jpg" class="work-image" alt="Fountain Fresh Plus bottle" loading="lazy" />
+			</div>
+			<div class="three-col-column col-2">
+				<img src="/work/fountain-fresh-plus/images/bottle-photo-3.jpg" class="work-image" alt="Fountain Fresh Plus bottle" loading="lazy" />
+			</div>
+			<div class="three-col-column col-3">				
+				<img src="/work/fountain-fresh-plus/images/bottle-photo-1.jpg" class="work-image" alt="Fountain Fresh Plus bottle" loading="lazy" />
+			</div>
+		</div>
+
+		<img src="/work/fountain-fresh-plus/images/ff-label.jpg" class="work-image" alt="Fountain Fresh Plus label" loading="lazy" />
+		<img src="/work/fountain-fresh-plus/images/ff-box.jpg" class="work-image" alt="Fountain Fresh Plus box" loading="lazy" />
+		
+	</div>
+	<div class="two-col-img-grid pagination">
+		<div class="previous">
+			<a href="/work/pebblelaneliving/pebblelaneliving.webc">
+				<span class="arr"><pagination-left-arrow></pagination-left-arrow></span>
+				<span class="title">Pebble Lane Living	</span>
+			</a>
+		</div>
+		<div class="next">
+			<a href="/work/sani-t/sani-t.webc">
+				<span class="title">Sani-t</span>
+				<span class="arr"><pagination-right-arrow></pagination-right-arrow></span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<style>
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+		filter: blur(2em);
+		scale: 0.85;
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+		scale: 1;
+	}
+}
+
+
+.whole-width-img {
+	img {
+		filter: blur(.7em);
+	}
+	.centered-section:before { 
+		display: none;
+	}
+	.centered-section {
+		z-index: 10;
+	}
+	.header-logo-svg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 9;
+
+		.center-svg {
+			display: block;
+			position: relative;
+			margin: 0 auto;
+			width: 100%;
+			max-width: 95rem;
+			background-color: white;
+		}
+		.big-logo {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+
+		svg {
+			filter: drop-shadow(0 0 .5em white);
+			animation-name: fadeInOpacity;
+			animation-iteration-count: 1;
+			animation-timing-function: ease-out;
+			animation-duration: 1s;
+		}
+	}
+}
+	
+</style>
