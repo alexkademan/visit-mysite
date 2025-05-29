@@ -1,5 +1,6 @@
 import pluginWebc from "@11ty/eleventy-plugin-webc";
 import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function(eleventyConfig) {
@@ -16,6 +17,23 @@ export default function(eleventyConfig) {
 
 	eleventyConfig.setServerOptions({
 		domDiff: false
+	});
+
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		// output image formats
+		formats: ["avif", "webp", "jpeg"],
+
+		// output image widths
+		widths: ["auto"],
+
+		// optional, attributes assigned on <img> nodes override these values
+		htmlOptions: {
+			imgAttributes: {
+				loading: "lazy",
+				decoding: "async",
+			},
+			pictureAttributes: {}
+		},
 	});
 
 	eleventyConfig.addPassthroughCopy("./content/fonts/DMSerifDisplay-Regular.woff2");
@@ -35,6 +53,11 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./content/css/reset.css");
 	eleventyConfig.addPassthroughCopy("./content/css/base.css");
 	eleventyConfig.addPassthroughCopy("./content/css/work.css");
+
+	eleventyConfig.addCollection("work", async (collectionsApi) => {
+		// get unsorted items
+		return collectionsApi.getAll();
+	});
 };
 
 export const config = {
