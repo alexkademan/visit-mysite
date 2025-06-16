@@ -2,125 +2,28 @@
 // Initialize page data in JavaScript front matter
 let section = "work";
 ---
+
 <div class="home-title">
 	<div class="main-column-wide">
 
 		<div class="wide three-title-col homepage-intro">
 			<div class="col-1">
-				<h1>Web Designer, <br>Web Developer,<br />Graphic Designer</h1>
+				<h1>Graphic Designer</h1>
 			</div>
 			<div class="col-2">
 				<span class="intro-text">
 					<p>
-						I am a senior designer who specializes in both web and print design. My nearly two decades of experience inform my approach to my work with a deep foundation of wisdom, paired with an ever curious eye to future developments in the industry.
+						I have been working as a Graphic Designer for twenty years and am an expert in mutiple design programs. Colaberating, problem solving and overall working with a team on projects is a fullfilling activity of mine. 
 					</p>
 					<p>
-						I build things with care, and love what I build. 
+						I have great pride and joy in my projects.
 					</p>
 				</span>
 			</div>
 		</div>
 	</div>
 </div>
-
-<section class="work-page page-full">
-	<h1 @raw="title" class="page-title visually-hidden"></h1>
-	<div class="work-grid">		
-		<div class="work-module">
-			<a href="/work/smartlivinghg/smartlivinghg.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back slhg">
-						<link-smartlivinghg-back></link-smartlivinghg-back>
-					</span>
-					<span class="work-image-front">
-						<link-smartlivinghg-front></link-smartlivinghg-front>
-					</span>
-				</div>
-				<h3>Smart Living Home &amp; Garden</h3>
-			</a>
-		</div>		
-		<div class="work-module">
-			<a href="/work/solfulfitness/solfulfitness.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back solful">
-						<link-solful-back></link-solful-back>
-					</span>
-					<span class="work-image-front">
-						<link-solful-front></link-solful-front>
-					</span>
-				</div>
-				<h3>Solful Fitness</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/pebblelaneliving/pebblelaneliving.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back pll">
-						<link-pebblelaneliving-back></link-smartlivinghg-back>
-					</span>
-					<span class="work-image-front">
-						<link-pebblelaneliving-front></link-smartlivinghg-front>
-					</span>
-				</div>
-				<h3>Pebble Lane Living</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/fountain-fresh-plus/fountain-fresh-plus.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back ff">
-						<link-fountainfresh-back></link-fountainfresh-back>
-					</span>
-					<span class="work-image-front">
-						<link-fountainfresh-front></link-fountainfresh-front>
-					</span>
-				</div>
-				<h3>Fountain Fresh Plus</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/sani-t/sani-t.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back sani-t">
-						<link-sani-t-back></link-sani-t-back>
-					</span>
-					<span class="work-image-front">
-						<link-sani-t-front></link-sani-t-front>
-					</span>
-				</div>
-				<h3>Sani-t</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/cedarcrest/cedarcrest.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back cc">
-						<link-cedarcrest-back></link-cedarcrest-back>
-					</span>
-					<span class="work-image-front">
-						<link-cedarcrest-front></link-cedarcrest-front>
-					</span>
-				</div>
-				<h3>Cedar Crest Ice Cream</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/gauthier/gauthier.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back gb">
-						<link-gauthier-back></link-gauthier-back>
-					</span>
-					<span class="work-image-front">
-						<link-gauthier-front></link-gauthier-front>
-					</span>
-				</div>
-				<h3>Gauthier Biomedical</h3>
-			</a>
-		</div>
-		
-	</div>
-</section>
-
+<work-all></work-all>
 
 <style>
 
@@ -150,145 +53,14 @@ let section = "work";
 			animation-timing-function: ease-out;
 		}
 	}
-
-	.work-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1em;
-		padding: 1em 1rem 8em;
-
-		.work-module {
-			grid-column: 1 /3;
-		}
-		.work-module h3 {
-			font-size: .8em;
-		}
-	}
-	.img-wrapper {
-		width: 100%;
-		height: auto;
-		overflow: hidden;
-		display: block;
-		position: relative;
-		aspect-ratio: 4 / 3;
-		background-color: deeppink;
-	}
-
-	.image-wrapper,
-	.work-image {
-		overflow: hidden;
-		background-color: #F4F4F4;
-	}
-	.work-image {
-		display: flex;
-		width: 100%;
-		transition: 0.3s;
-		filter: contrast(1.2) saturate(0);
-	}
-
-	.work-image:hover {
-		transform: scale(1.1);
-		filter: contrast(1) saturate(1);
-	}
-
-	.work-grid h3 {
-		display: block;
-		color: var(--deep-slate-blue);
-		padding-top: 1em;
-		font-size: 1.1em;;
-	}
-
-	.work-grid a {
-		text-decoration: none;
-	}
-
-	.work-link .work-image-front,
-	.work-link .work-image-back {
-		position: absolute;
-		left: 0;
-		top: 0;
-		display: flex;
-		width: 100%;
-		height: 100%;
-		transition: 0.3s;
-		filter: contrast(1.2) saturate(0);
-	}
-
-	.work-link:hover .work-image-front {
-		transform: scale(1.1);
-		filter: contrast(1) saturate(1);
-	}
-
-	.work-link .work-image-back {
-		background-color: var(--deep-slate-blue);
-		position: absolute;
-		top: 0;
-		transition: .75s ease-in-out;
-		transform: scale(1.1);
-	}
-	.work-link .work-image-back svg {
-		opacity: .1;
-	}
-	.work-link:hover .work-image-back {
-		transform: scale(1);
-		filter: contrast(1) saturate(1);
-	}
-
-	.work-link  {
-		
-		.slhg {
-			background-color: rgb(155, 168, 131);
-		}
-		.solful {
-			background-color: rgb(239, 65, 55);
-		}
-		.pll {
-			background-color: #60554b;
-		}
-
-		.ff {
-			background-color: rgb(0, 142, 128);
-		}
-		.sani-t {
-			background-color: rgb(91, 126, 150);
-		}
-		.cc {
-			background-color: rgb(243, 153, 192);
-		}
-		.gb {
-			background-color: rgb(15, 119, 187);
-		}
-		
-	}
-
-
-
-
-	@media only screen and (min-width: 800px) {
-		.work-grid {
-			padding-top: 1.5em;
-			gap: 1.5em;
-
-			.work-module {
-				grid-column: auto;
-			}
-			.work-module h3 {
-				font-size: 1em;
-			}
-		}
-	}
-
 	.home-title {
-		background-color: var(--off-white);
+		background-color: var(--lavender-blush);
 
 		.main-column-wide {
 			padding-top: 0;
 			padding-bottom: 0;
 		}
 	}
-
-
-
 	.three-title-col {
 		display: grid;
 		gap: .25em;

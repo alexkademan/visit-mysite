@@ -14,7 +14,7 @@ let title = "Home";
 		<meta name="generator" :content="eleventy.generator">
 		<meta property="og:type" content="website">
 		<meta property="og:url" :content="metadata.url+page.url">
-		<meta property="og:image" content="/images/og-image-alex-kademan.gif"> 
+		<meta property="og:image" content="/images/og-image-jessica-kademan.png"> 
 		<meta property="og:title" :content="title+' • '+metadata.title"> 
 		<meta property="og:description" :content="metadata.description"> 
 
@@ -53,7 +53,13 @@ let title = "Home";
 						</div>
 					</div>
 				</div>
-				<footer-ak-icon></footer-ak-icon>
+	
+				<a href="/" class="home-link" aria-label="Home">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.752 108.12">
+						<path d="M7.59 4.984v87.797h72V4.984zM75.164 88.5H11.726V9.265h63.438z" style="fill:#9e2142"/>
+						<path d="M28.885 71.289c0 4.865-3.985 5.307-5.133 5.307l.797.087-7.387-.087v5.308h6.59c4.246 0 10.437-2.83 10.437-10.615V15.553h-5.304zM70.017 15.553H61.35L47.904 26.08V15.553h-5.308v58.39h5.308V32.805l7.162-5.573c8.76 15.215 8.76 36.713 8.76 44.057v2.654h5.307V71.29c0-7.785 0-30.877-9.909-47.33zM28.785 98.588h29.61v5.401h-29.61z" style="fill:#9e2142"/>
+					</svg>
+				</a>
 			</div>
 
 

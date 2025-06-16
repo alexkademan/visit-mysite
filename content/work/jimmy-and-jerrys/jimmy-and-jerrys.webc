@@ -1,0 +1,96 @@
+---js
+function permalink(data) {
+	return "/work/jimmy-and-jerrys/";
+}
+let title = "Jimmy-and Jerrys";
+let section = "work";
+---
+
+<div class="whole-window whole-width-img">
+	<div class="whole-width-img-container">
+		
+		<img src="/work/pebblelaneliving/images/pll-header-01.jpg" class="work-image" alt="Pebble Lane Living website on Laptop" loading="lazy" />
+		<div class="centered-section">
+			<div class="main-column-wide">
+				<h1>Pebble Lane<br />Living</h1>
+			</div>
+		</div>
+
+		
+	</div>
+</div>
+
+<div class="main-column-wide">
+	<div class="two-col-grid">
+		<div class="left">
+			<h2>Visual Branding</h2>
+
+			<h1>Web Design,<br />Development,<br />+ Logo Design</h1>
+			<ul>
+				<li>E-Commerce Theme Development</li>
+				<li>E-Commerce App Customization</li>
+				<li>Logo Design</li>
+			</ul>
+		</div>
+		<div class="right">
+			<h2>Overview</h2>
+			<p>
+				Pebble Lane was primarily a furniture retailer that has since been absorbed by <a href="/work/smartlivinghg/smartlivinghg.webc">Smart Living Home &amp; Garden</a>.
+			</p>
+			<p>
+				I built this website alone using a now-defunct shopping cart program, and maintained it for several years before it was shut down.
+			</p>
+			<p>
+				Also I created the logo and managed all branding for the website and all of it's print needs during it's several year run.
+			</p>
+		</div>
+
+	</div>
+
+
+	<div class="two-col-img-grid">
+		<div class="wide three-col pll-3-col">
+			<div class="three-col-column col-1">
+				<pll-logo-for-page></pll-logo-for-page>
+			</div>
+			<div class="three-col-column col-2">
+				<img src="/work/pebblelaneliving/images/pll-image-1.jpg" class="work-image" alt="Pebble Lane Living logo engraved on hammock" loading="lazy" />
+			</div>
+			<div class="three-col-column col-3">
+				<img src="/work/pebblelaneliving/images/pll-image-2.jpg" class="work-image" alt="Pebble Lane Living logo engraved on hammock" loading="lazy" />
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="two-col-img-grid pagination">
+		<div class="previous">
+			<a href="/work/solfulfitness/solfulfitness.webc">
+				<span class="arr"><pagination-left-arrow></pagination-left-arrow></span>
+				<span class="title">Solful Fitness</span>
+			</a>
+		</div>
+		<div class="next">
+			<a href="/work/fountain-fresh-plus/fountain-fresh-plus.webc"">
+				<span class="title">Fountain Fresh Plus</span>
+				<span class="arr"><pagination-right-arrow></pagination-right-arrow></span>
+			</a>
+		</div>
+	</div>
+
+</div>
+
+<style>
+	.pll-3-col {
+		svg {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+		}
+		
+		.col-1 {
+			background-color: #60554b;
+		}
+	}
+</style>

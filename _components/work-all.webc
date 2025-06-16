@@ -1,104 +1,98 @@
 
-<div class="work-page page-full">
+<section class="work-page page-full">
 	<h1 @raw="title" class="page-title visually-hidden"></h1>
-	<div class="work-grid">
-
-		<div class="grid-title visually-hidden"><h2>Title Here?</h2></div>
+	<div class="work-grid">	
+		<div class="work-module">
+			<a href="/work/hello-honey/hello-honey.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/hello-honey.png" class="work-image" alt="Hello Honey" loading="lazy" />
+				</div>
+				<h3>Hello Honey</h3>
+			</a>
+		</div>		
+		<div class="work-module">
+			<a href="/work/tea-thyme/tea-thyme.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/tea-thyme.png" class="work-image" alt="Tea Thyme" loading="lazy" />
+				</div>
+				<h3>Tea Thyme</h3>
+			</a>
+		</div>
+		<div class="work-module">
+			<a href="/work/ruperts-naturals/ruperts-naturals.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/ruperts-naturals.png" class="work-image" alt="Tea Thyme" loading="lazy" />
+				</div>
+				<h3>Rupert&apos;s Naturals</h3>
+			</a>
+		</div>
+		<div class="work-module">
+			<a href="/work/pabst/pabst.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/pabst.png" class="work-image" alt="Tea Thyme" loading="lazy" />
+				</div>
+				<h3>Pabst</h3>
+			</a>
+		</div>
+		<div class="work-module">
+			<a href="/work/bom-bom/bom-bom.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/bom-bom.png" class="work-image" alt="Tea Thyme" loading="lazy" />
+				</div>
+				<h3>Bom Bom</h3>
+			</a>
+		</div>
+		<div class="work-module">
+			<a href="/work/mediquick/mediquick.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/mediquick.png" class="work-image" alt="Tea Thyme" loading="lazy" />
+				</div>
+				<h3>MediQuick</h3>
+			</a>
+		</div>
+		<div class="work-module">
+			<a href="/work/seven-select/seven-select.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/seven-select.png" class="work-image" alt="Tea Thyme" loading="lazy" />
+				</div>
+				<h3>Seven Select</h3>
+			</a>
+		</div>
+		<div class="work-module">
+			<a href="/work/maybery-farms/maybery-farms.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/maybery-farms.png" class="work-image" alt="Tea Thyme" loading="lazy" />
+				</div>
+				<h3>Maybery Farms</h3>
+			</a>
+		</div>
+		<div class="work-module">
+			<a href="/work/miss-kims/miss-kims.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/miss-kims.png" class="work-image" alt="Tea Thyme" loading="lazy" />
+				</div>
+				<h3>Miss Kim&apos;s</h3>
+			</a>
+		</div>
+		<div class="work-module">
+			<a href="/work/scouts/scouts.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/scouts.png" class="work-image" alt="Tea Thyme" loading="lazy" />
+				</div>
+				<h3>Scouts</h3>
+			</a>
+		</div>	
+		<div class="work-module">
+			<a href="/work/jimmy-and-jerrys/jimmy-and-jerrys.webc" class="work-link">
+				<div class="img-wrapper">
+					<img src="/work/images/jimmy-and-jerrys.png" class="work-image" alt="Jimmy and Jerry's" loading="lazy" />
+				</div>
+				<h3>Jimmy and Jerry&apos;s</h3>
+			</a>
+		</div>
 		
-		<div class="work-module">
-			<a href="/work/smartlivinghg/smartlivinghg.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back slhg">
-						<link-smartlivinghg-back></link-smartlivinghg-back>
-					</span>
-					<span class="work-image-front">
-						<link-smartlivinghg-front></link-smartlivinghg-front>
-					</span>
-				</div>
-				<h3>Smart Living Home &amp; Garden</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/solfulfitness/solfulfitness.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back solful">
-						<link-solful-back></link-solful-back>
-					</span>
-					<span class="work-image-front">
-						<link-solful-front></link-solful-front>
-					</span>
-				</div>
-				<h3>Solful Fitness</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/pebblelaneliving/pebblelaneliving.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back pll">
-						<link-pebblelaneliving-back></link-smartlivinghg-back>
-					</span>
-					<span class="work-image-front">
-						<link-pebblelaneliving-front></link-smartlivinghg-front>
-					</span>
-				</div>
-				<h3>Pebble Lane Living</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/fountain-fresh-plus/fountain-fresh-plus.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back ff">
-						<link-fountainfresh-back></link-fountainfresh-back>
-					</span>
-					<span class="work-image-front">
-						<link-fountainfresh-front></link-fountainfresh-front>
-					</span>
-				</div>
-				<h3>Fountain Fresh Plus</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/sani-t/sani-t.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back sani-t">
-						<link-sani-t-back></link-sani-t-back>
-					</span>
-					<span class="work-image-front">
-						<link-sani-t-front></link-sani-t-front>
-					</span>
-				</div>
-				<h3>Sani-t</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/cedarcrest/cedarcrest.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back cc">
-						<link-cedarcrest-back></link-cedarcrest-back>
-					</span>
-					<span class="work-image-front">
-						<link-cedarcrest-front></link-cedarcrest-front>
-					</span>
-				</div>
-				<h3>Cedar Crest Ice Cream</h3>
-			</a>
-		</div>
-		<div class="work-module">
-			<a href="/work/gauthier/gauthier.webc" class="work-link">
-				<div class="img-wrapper">
-					<span class="work-image-back gb">
-						<link-gauthier-back></link-gauthier-back>
-					</span>
-					<span class="work-image-front">
-						<link-gauthier-front></link-gauthier-front>
-					</span>
-				</div>
-				<h3>Gauthier Biomedical</h3>
-			</a>
-		</div>
 	</div>
-</div>
-
+</section>
 
 <style>
 	.work-grid {
@@ -148,6 +142,7 @@
 	.work-image:hover {
 		transform: scale(1.1);
 		filter: contrast(1) saturate(1);
+		background-color: transparent;
 	}
 
 	.work-grid h3 {
@@ -162,8 +157,7 @@
 	}
 
 
-	.work-link .work-image-front,
-	.work-link .work-image-back {
+	.work-link .work-image-front {
 		display: flex;
 		width: 100%;
 		transition: 0.3s;
@@ -175,53 +169,9 @@
 		filter: contrast(1) saturate(1);
 	}
 
-	.work-link .work-image-back {
-		background-color: var(--deep-slate-blue);
-		position: absolute;
-		top: 0;
-		transition: .75s ease-in-out;
-		transform: scale(1.1);
-	}
-	.work-link .work-image-back svg {
-		opacity: .1;
-	}
-	.work-link:hover .work-image-back {
-		transform: scale(1);
-		filter: contrast(1) saturate(1);
-	}
-
-	.work-link  {
-		
-		.slhg {
-			background-color: rgb(155, 168, 131);
-		}
-		.solful {
-			background-color: rgb(239, 65, 55);
-		}
-		.pll {
-			background-color: #60554b;
-		}
-
-		.ff {
-			background-color: rgb(0, 142, 128);
-		}
-		.sani-t {
-			background-color: rgb(91, 126, 150);
-		}
-		.cc {
-			background-color: rgb(243, 153, 192);
-		}
-		.gb {
-			background-color: rgb(15, 119, 187);
-		}
-		
-	}
-
-
-
-
 	@media only screen and (min-width: 800px) {
 		.work-grid {
+			padding-top: 1.5em;
 			gap: 1.5em;
 
 			.work-module {

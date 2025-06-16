@@ -1,5 +1,5 @@
 <a href="/" class="home-link" aria-label="Home">
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" class="footer-ak-icon">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" class="footer-icon-main">
 		<defs>
 			<clipPath id="ak">
 				<path d="M85.3 52.4V.7c13.2 2.5 25.1 8.5 34.6 17.1zM25 82.8l-15.7 24c11.7 20.6 33.2 34.9 58.2 36.4V82.7H25ZM0 71.5c0 5 .5 10 1.5 14.7L57 1C24.5 7.9 0 36.8 0 71.5m129.7 43.1c9-12 14.3-27 14.3-43.1 0-14.9-4.5-28.7-12.3-40.2L89 74l40.6 40.6ZM67.5 65V17.6L36.6 65zm17.8 77.2c11.9-2.2 22.8-7.4 31.9-14.8L85.3 95.5z" style="fill:none"/>
