@@ -1,6 +1,8 @@
 ---js
 // Initialize page data in JavaScript front matter
 let section = "work";
+eleventyImport:
+  collections: ["posts"]
 ---
 
 <div class="home-title">

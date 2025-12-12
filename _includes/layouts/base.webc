@@ -2,6 +2,8 @@
 // Initialize page data in JavaScript front matter
 let title = "Home";
 // let url = `${metadata.url}${page.url}`;
+eleventyImport:
+  collections: ["posts"]
 ---
 
 <!doctype html>
@@ -28,13 +30,16 @@ let title = "Home";
 		<link rel="stylesheet" href="/css/work.css" webc:keep>
 		<style webc:keep @raw="getBundle('css')"></style>
 	</head>
-	<body>		
+	<body>
 		<header class="main-header">
 			<nav class="main-column-wide"  aria-labelledby="main-navigation">
 				<masthead :section="section"></masthead>
 			</nav>
 		</header>
+
 		
+  
+
 		<!-- <h1 class="main-column" @text="metadata.description"></h1> -->
 		<div  @attributes="({ class: section+' white-bg' })">
 			<main @raw="content"></main>

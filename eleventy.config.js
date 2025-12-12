@@ -1,6 +1,9 @@
 import pluginWebc from "@11ty/eleventy-plugin-webc";
-import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+
+import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
+import pluginFilters from "./_config/filters.js";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function(eleventyConfig) {
@@ -58,6 +61,35 @@ export default function(eleventyConfig) {
 		// get unsorted items
 		return collectionsApi.getAll();
 	});
+
+	// Filters
+	eleventyConfig.addPlugin(pluginFilters);
+
+	eleventyConfig.addCollection("blogPosts", function(collectionApi) {
+		return collectionApi.getFilteredByTag("blog"); // Replace "blog" with your desired tag
+	});
+	// .eleventy.js
+	eleventyConfig.addCollection("posts", function(collectionApi) {
+		return collectionApi.getFilteredByTag("posts");
+	});
+
+	// eleventyConfig.addPlugin(IdAttributePlugin, {
+		// by default we use Eleventy’s built-in `slugify` filter:
+		// slugify: eleventyConfig.getFilter("slugify"),
+		// selector: "h1,h2,h3,h4,h5,h6", // default
+	// });
+
+	eleventyConfig.addShortcode("currentBuildDate", () => {
+		return (new Date()).toISOString();
+	});
+
+	// Features to make your build faster (when you need them)
+
+	// If your passthrough copy gets heavy and cumbersome, add this line
+	// to emulate the file copy on the dev server. Learn more:
+	// https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
+
+	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 };
 
 export const config = {
