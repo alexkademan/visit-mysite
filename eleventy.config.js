@@ -7,6 +7,7 @@ import pluginFilters from "./_config/filters.js";
 
 import { PostsByCategory } from './_collections/posts-by-category.js';
 import { PostsByCategoryWork } from './_collections/posts-by-category-work.js';
+import { PostsByCategoryPagination } from './_collections/posts-by-category-pagination.js';
 import { Posts } from './_collections/posts.js';
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */

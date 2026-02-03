@@ -1,17 +1,15 @@
 ---js
 {
 	layout: "default",
-	eleventyComputed: {
-		testinfo: (d) => {
-			return 'test title'
-		}
-	}
 }
 ---
+
+<script webc:type="js">
+	// console.log(pagination.href);
+</script>
 <section class="work-page">
-	
+	<work-page-pagination-new></work-page-pagination-new>
 	<h1>something</h1>
-	<h1 :content="pageNumber"></h1>
 	<work-page-header></work-page-header>
 
 	<article class="main-column-wide">

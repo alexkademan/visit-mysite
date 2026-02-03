@@ -8,7 +8,7 @@ category: work
 section: work
 permalink: /work/tea-thyme/
 layout: work-template.webc
-date: 2025-07-25T12:00:00.000Z
+date: 2026-01-19T12:00:00.000Z
 headerimage: img/fountain-fresh-header.jpg
 headerlogo: img/fountain-fresh-header-logo.svg
 previous: {
@@ -18,6 +18,10 @@ previous: {
 next: {
 	title: Sani-t,
 	url: /work/sani-t/
+}
+pagination: {
+  data: collections.posts,
+  size: 100,
 }
 ---
 

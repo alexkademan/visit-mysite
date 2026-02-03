@@ -1,3 +1,6 @@
-<work-page-pagination-new>
-	this is not happening????
-</work-page-pagination-new>
+<script webc:type="js">
+	`<pagination>
+		<h1>pagination ?????? ${pageNumber}</h1>
+		
+	</pagination>`;
+</script>
