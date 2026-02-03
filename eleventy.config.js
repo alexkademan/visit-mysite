@@ -5,6 +5,10 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import pluginFilters from "./_config/filters.js";
 
+import { PostsByCategory } from './_collections/posts-by-category.js';
+import { PostsByCategoryWork } from './_collections/posts-by-category-work.js';
+import { Posts } from './_collections/posts.js';
+
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function(eleventyConfig) {
 	eleventyConfig.ignores.add("README.md");
@@ -39,6 +43,21 @@ export default function(eleventyConfig) {
 		},
 	});
 
+	/* Collections */
+	eleventyConfig.addCollection('posts', Posts);
+	eleventyConfig.addCollection('postsByCategory', PostsByCategory);
+	eleventyConfig.addCollection('postsByCategoryWork', PostsByCategoryWork);
+
+	eleventyConfig.addCollection("work", async (collectionsApi) => {
+		// get unsorted items
+		return collectionsApi.getAll();
+	});
+
+	// Get only content that matches a tag
+	eleventyConfig.addCollection("myPosts", function (collectionsApi) {
+		return collectionsApi.getFilteredByTag("post");
+	});
+
 	eleventyConfig.addPassthroughCopy("./content/fonts/DMSerifDisplay-Regular.woff2");
 	eleventyConfig.addPassthroughCopy("./content/fonts/LibreCaslonText-Bold.woff2");
 	eleventyConfig.addPassthroughCopy("./content/fonts/Lato-Light.woff2");
@@ -57,22 +76,10 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./content/css/base.css");
 	eleventyConfig.addPassthroughCopy("./content/css/work.css");
 
-	eleventyConfig.addCollection("work", async (collectionsApi) => {
-		// get unsorted items
-		return collectionsApi.getAll();
-	});
-
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
 
-	eleventyConfig.addCollection("blogPosts", function(collectionApi) {
-		return collectionApi.getFilteredByTag("blog"); // Replace "blog" with your desired tag
-	});
-	// .eleventy.js
-	eleventyConfig.addCollection("posts", function(collectionApi) {
-		return collectionApi.getFilteredByTag("posts");
-	});
-
+	
 	// eleventyConfig.addPlugin(IdAttributePlugin, {
 		// by default we use Eleventy’s built-in `slugify` filter:
 		// slugify: eleventyConfig.getFilter("slugify"),

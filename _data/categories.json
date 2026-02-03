@@ -1,0 +1,14 @@
+{
+	"fan": {
+		"name": "Fan"
+	},
+	"work": {
+		"name": "Work"
+	},
+	"design": {
+		"name": "Design"
+	},
+	"development": {
+		"name": "Development"
+	}
+}

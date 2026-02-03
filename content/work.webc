@@ -5,6 +5,6 @@ function permalink(data) {
 let title = "Work";
 let section = "work";
 ---
-
+content > work.webc
 <work-all></work-all>
  

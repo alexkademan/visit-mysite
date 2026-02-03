@@ -39,6 +39,11 @@
 		"zod": "^3.24.4",
 		"zod-validation-error": "^3.4.1"
 	},
+	"dependencies": {
+		"@11ty/is-land": "^4.0.0",
+		"browserslist": "^4.25.1",
+		"clean-css": "^5.3.3"
+	},
 	"engines": {
 		"node": ">=18"
 	}

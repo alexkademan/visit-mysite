@@ -1,0 +1,81 @@
+<script webc:type="js">
+	`<footer  class="main-column-wide two-col-img-grid pagination">
+		<div class="previous">
+			<a href="${previous.url}">
+				<span class="arr"><pagination-left-arrow></pagination-left-arrow></span>
+				<span class="title">${previous.title}</span>
+			</a>
+		</div>
+		<div class="next">
+			<a href="${next.url}">
+				<span class="title">${next.title}</span>
+				<span class="arr"><pagination-right-arrow></pagination-right-arrow></span>
+			</a>
+		</div>
+	</footer>`;
+</script>
+
+<style webc:scoped>
+	:host {
+		.pagination {
+			padding-top: 7em;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		
+		.previous,
+		.next {
+			display: flex;		
+		}
+
+		.previous > a,
+		.next > a {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			align-items: center;
+		}
+
+		.next {
+			justify-content: flex-end;
+		}
+
+		a {
+			display: block;
+			float: left;
+			position: relative;
+			padding: 1em 0;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-family: "lato";
+			color: var(--deep-slate-blue);
+			/* background-color: lightgray; */
+			font-size: smaller;
+
+			.arr {
+				display: inline-block;
+				transition: .2s ease;
+				width: .75em;
+				align-items: center;
+			}
+
+			.arr svg {
+				display: block;
+				fill: var(--deep-slate-blue);
+				transition: .2s ease;
+			}
+
+			.title {
+				display: inline-block;
+				padding: 0 .5em;
+				line-height: 1.2em;
+			}
+		}
+		a:hover { 
+			color: var(--terra-cotta);
+
+			.arr svg {
+				fill: var(--terra-cotta);
+			}
+		}
+	}
+</style>

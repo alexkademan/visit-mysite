@@ -1,8 +1,14 @@
 ---js
-// Initialize page data in JavaScript front matter
-let section = "work";
-eleventyImport:
-  collections: ["posts"]
+{
+	pagination: {
+		data: 'collections.postsByCategoryWork',
+		size: 1,
+		alias: "category",
+	},
+	title: 'Visit My Site',
+	section: 'work',
+	eleventyExcludeFromCollections: true
+}
 ---
 
 <div class="home-title">
@@ -25,6 +31,7 @@ eleventyImport:
 		</div>
 	</div>
 </div>
+<work-grid-new :pagination="pagination"></work-grid-new>
 <work-all></work-all>
 
 <style>

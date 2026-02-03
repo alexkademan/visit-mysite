@@ -1,0 +1,24 @@
+<work-card-list>
+	<work-card webc:for="post of category.items" :@post="post"></work-card>
+</work-card-list>
+
+<style webc:scoped>
+	:host {
+		display: block;
+		padding: .5rem 1rem 5em;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 75rem;
+		position: relative;
+
+		h1 {
+			display: none;
+		}
+	}
+
+	@media only screen and (min-width: 900px) {
+		:host {
+		}
+	}
+	
+</style>

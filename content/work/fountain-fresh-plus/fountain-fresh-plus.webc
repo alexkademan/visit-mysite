@@ -1,6 +1,6 @@
 ---js
 function permalink(data) {
-	return "/work/fountain-fresh-plus/";
+	return "/workOLD/fountain-fresh-plus/";
 }
 let title = "Fountain Fresh +";
 let section = "work";

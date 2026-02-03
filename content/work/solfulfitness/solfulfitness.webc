@@ -1,6 +1,6 @@
 ---js
 function permalink(data) {
-	return "/work/solfulfitness/";
+	return "/workOLD/solfulfitness/";
 }
 let title = "Solful Fitness";
 let section = "work";

@@ -1,0 +1,115 @@
+<script webc:type="js">
+	`<card>
+		<a webc:root="override" :href="post.page.url" :aria-label="post.data.title">
+			<div class="img-wrapper" style="background-color: ${post.data.bgcolor}">
+				<img src="${post.imgPath}${post.data.cardbackground}" alt="${post.data.description}" class="work-image work-image-back" />
+				<img src="${post.imgPath}${post.data.cardforeground}" alt="${post.data.title}" class="work-image work-image-front" />
+			</div>
+			<hgroup>
+				<h2 @text="post.data.title"></h2>
+				<h3 @text="post.data.description"></h3>
+			</hgroup>
+		</a>
+	</card>`;
+</script>
+
+<style webc:scoped>
+	:host {
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		color: var(--brand-600);
+
+		.img-wrapper {
+			transition: .25s ease-in-out;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			display: block;
+			position: relative;
+			aspect-ratio: 4 / 3;
+			filter: saturate(0);
+			border-radius: 10px .5em 0 0;
+		}
+		.work-image-front,
+		.work-image-back {
+			display: flex;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			aspect-ratio: 4 / 3;
+		}
+		.work-image-front {
+			transition: .5s ease-in-out;
+			transform: scale(1);
+		}
+		.work-image-back {
+			transition: .25s ease-in-out;
+			transform: scale(1.1);
+			opacity: .1;
+		}
+	}
+	
+	:host:hover {
+		.img-wrapper {
+			filter: saturate(1);
+		}
+		.work-image-front {
+			transition: .125s ease-in-out;
+			transform: scale(1.1);
+		}
+		.work-image-back {
+			transform: scale(1);
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		color: var(--brand-600);
+		padding: .7em .5em;
+		padding: 0;
+		border-radius: .5em;
+		border: 1px var(--brand-200) solid;
+		border: none;
+		transition: all .5s ease-out;
+		background-color: white;
+		filter: drop-shadow(.125em .125em .43em var(--brand-300));
+	}
+	
+	a:is(:hover, :focus-visible) {
+		
+		border: 1px var(--brand-500) solid;
+		border: none;
+		filter: drop-shadow(.125em .125em .43em var(--brand-400));
+
+
+		h2 {
+			color: var(--brand-700);
+		}
+	}
+	
+
+	hgroup {
+		display: inline-block;
+		padding: 1rem .75rem;
+		width: 100%;
+		background-color: transparent;
+	}
+	h2,
+	h3 {
+		font-family: 'lato-regular';
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		padding: 0;
+		margin: 0;
+		color: var(--brand-600)
+	}
+
+	h3 {
+		font-size: 1.0rem;
+		padding-top: .25rem;
+		color: var(--brand-400)
+	}
+
+</style>

@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html :lang="metadata.language">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title @text="title || metadata.title"></title>
+
+		<meta name="generator" :content="eleventy.generator">
+		<meta property="og:type" content="website">
+		<meta property="og:url" :content="metadata.url+page.url">
+		<meta property="og:image" content="/images/og-image-alex-kademan.gif"> 
+		<meta property="og:title" :content="title+' • '+metadata.title"> 
+		<meta property="og:description" :content="metadata.description"> 
+
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+		<meta name="description" :content="description || metadata.description">
+		<meta name="generator" :content="eleventy.generator">
+		<link rel="stylesheet" href="/css/reset.css" webc:keep>
+		<!--- This is rolled into the bundle. --->
+		<link rel="stylesheet" href="/css/base.css" webc:keep>
+		<link rel="stylesheet" href="/css/work.css" webc:keep>
+		<style webc:keep @raw="getBundle('css')"></style>
+
+		<!-- Google tag (gtag.js) -->
+		<script webc:keep async src="https://www.googletagmanager.com/gtag/js?id=G-2244V623KZ"></script>
+		<script webc:keep>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-2244V623KZ');
+		</script>
+	</head>
+	<body>
+		<masthead :section="section"></masthead>
+		<div  @attributes="({ class: section+' white-bg' })">
+			<main @raw="content"></main>
+		</div>
+
+		<footer class="main-footer main-column-wide">
+			<div class="footer-icon">
+				<div class="left">
+					<div class="copyright">
+						<div class="title">
+							&copy;<em webc:nokeep @text="(new Date()).getFullYear()"></em> 
+							<span @text="metadata.title"></span>
+						</div>
+						<social-icons></social-icons>
+					</div>
+				</div>
+				<a href="/" class="home-link" aria-label="Home">
+					<ak-icon location="footer"></ak-icon>
+				</a>
+			</div>
+		</footer>
+		<script src="/js/masthead.js" webc:keep></script>
+		<script type="module" webc:keep @raw="getBundle('js')"></script>
+	</body>
+</html>

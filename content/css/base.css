@@ -1,3 +1,4 @@
+/* https://perceptualpalettes.alexdunn.au/?c=Brand%23211103%2CSecondary%233d1308%2CTertiary%237b0d1e%2CAccent%239f2042%2CNeutral%23f8e5ee&l=90%2C80%2C70%2C60%2C35%2C21%2C12%2C6%2C2%2C1%2C0.5&n=true&i=true */
 :root {
 	--font-family: system-ui, sans-serif;
 
@@ -6,7 +7,6 @@
 	--text-color-link: #082840;
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050F;
-
 
 	--antique-white: #F4F1DE; 
 	--terra-cotta: #E07A5F;
@@ -19,6 +19,63 @@
 	--burgundy: #7B0D1E;
 	--amaranth-purple: #9F2042;
 	--lavender-blush: #F8E5EE;
+
+	--brand-050: #fdf2e8;
+	--brand-100: #fbe3cf;
+	--brand-200: #f8d3b3;
+	--brand-300: #f5c194;
+	--brand-400: #ec862d;
+	--brand-500: #c46512;
+	--brand-600: #974e0e;
+	--brand-700: #6c370a;
+	--brand-800: #3d1f05;
+	--brand-900: #291504;
+	--brand-950: #190d02;	
+	--secondary-050: #fdf1ee;
+	--secondary-100: #fae2dc;
+	--secondary-200: #f8d2c8;
+	--secondary-300: #f5bfb2;
+	--secondary-400: #eb8369;
+	--secondary-500: #e24922;
+	--secondary-600: #b03717;
+	--secondary-700: #7f2711;
+	--secondary-800: #48160a;
+	--secondary-900: #310f06;
+	--secondary-950: #1f0a04;
+	--tertiary-050: #fdf0f2;
+	--tertiary-100: #fce1e5;
+	--tertiary-200: #facfd6;
+	--tertiary-300: #f8bcc5;
+	--tertiary-400: #f17c8e;
+	--tertiary-500: #ea3854;
+	--tertiary-600: #c1142f;
+	--tertiary-700: #8c0f22;
+	--tertiary-800: #510814;
+	--tertiary-900: #38060e;
+	--tertiary-950: #250409;
+	--accent-050: #fcf1f4;
+	--accent-100: #f9e1e8;
+	--accent-200: #f6d1da;
+	--accent-300: #f2becc;
+	--accent-400: #e6829c;
+	--accent-500: #da4a70;
+	--accent-600: #b8254c;
+	--accent-700: #851b37;
+	--accent-800: #4c0f20;
+	--accent-900: #340a15;
+	--accent-950: #21070e;
+	--neutral-060: #fbf1f6;
+	--neutral-100: #f7e2ec;
+	--neutral-200: #f3d1e1;
+	--neutral-300: #eebfd5;
+	--neutral-400: #de84af;
+	--neutral-500: #d0508d;
+	--neutral-600: #ad2f6b;
+	--neutral-700: #7d224d;
+	--neutral-800: #47132c;
+	--neutral-900: #300d1e;
+	--neutral-950: #1e0813;
+
 }
 ::-moz-selection {
 	color: var(--lavender-blush);

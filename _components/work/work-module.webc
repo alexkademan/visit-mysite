@@ -1,0 +1,15 @@
+	<is-land on:visible>
+		<div class="work-module">
+			<a href="/work/smartlivinghg/smartlivinghg.webc" class="work-link">
+				<div class="img-wrapper">
+					<span class="work-image-back slhg">
+						<link-smartlivinghg-back></link-smartlivinghg-back>
+					</span>
+					<span class="work-image-front">
+						<link-smartlivinghg-front></link-smartlivinghg-front>
+					</span>
+				</div>
+				<h3>Smart Living Home &amp; Garden</h3>
+			</a>
+		</div>
+	</is-land>

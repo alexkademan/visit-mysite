@@ -1,6 +1,6 @@
 ---js
 function permalink(data) {
-	return "/work/gauthier/";
+	return "/workOLD/gauthier/";
 }
 let title = "Gauthier Biomedical";
 let section = "work";

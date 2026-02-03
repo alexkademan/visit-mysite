@@ -1,0 +1,114 @@
+<div class="work-grid">
+	<is-land on:visible>
+		<div class="work-module">
+			<a href="/work/smartlivinghg/smartlivinghg.webc" class="work-link">
+				<div class="img-wrapper">
+					<span class="work-image-back slhg">
+						<link-smartlivinghg-back></link-smartlivinghg-back>
+					</span>
+					<span class="work-image-front">
+						<link-smartlivinghg-front></link-smartlivinghg-front>
+					</span>
+				</div>
+				<h3>Smart Living Home &amp; Garden</h3>
+			</a>
+		</div>
+	</is-land>
+
+	<is-land on:visible>
+		<div class="work-module">
+			<a href="/work/solfulfitness/solfulfitness.webc" class="work-link">
+				<div class="img-wrapper">
+					<span class="work-image-back solful">
+						<link-solful-back></link-solful-back>
+					</span>
+					<span class="work-image-front">
+						<link-solful-front></link-solful-front>
+					</span>
+				</div>
+				<h3>Solful Fitness</h3>
+			</a>
+		</div>
+	</is-land>
+
+	<is-land on:visible>
+		<div class="work-module">
+			<a href="/work/pebblelaneliving/pebblelaneliving.webc" class="work-link">
+				<div class="img-wrapper">
+					<span class="work-image-back pll">
+						<link-pebblelaneliving-back></link-smartlivinghg-back>
+					</span>
+					<span class="work-image-front">
+						<link-pebblelaneliving-front></link-smartlivinghg-front>
+					</span>
+				</div>
+				<h3>Pebble Lane Living</h3>
+			</a>
+		</div>
+	</is-land>
+
+	<is-land on:visible>
+		<div class="work-module">
+			<a href="/work/fountain-fresh-plus/fountain-fresh-plus.webc" class="work-link">
+				<div class="img-wrapper">
+					<span class="work-image-back ff">
+						<link-fountainfresh-back></link-fountainfresh-back>
+					</span>
+					<span class="work-image-front">
+						<link-fountainfresh-front></link-fountainfresh-front>
+					</span>
+				</div>
+				<h3>Fountain Fresh Plus</h3>
+			</a>
+		</div>
+	</is-land>
+
+	<is-land on:visible>
+		<div class="work-module">
+			<a href="/work/sani-t/sani-t.webc" class="work-link">
+				<div class="img-wrapper">
+					<span class="work-image-back sani-t">
+						<link-sani-t-back></link-sani-t-back>
+					</span>
+					<span class="work-image-front">
+						<link-sani-t-front></link-sani-t-front>
+					</span>
+				</div>
+				<h3>Sani-t</h3>
+			</a>
+		</div>
+	</is-land>
+
+		<is-land on:visible>
+			<div class="work-module">
+				<a href="/work/cedarcrest/cedarcrest.webc" class="work-link">
+					<div class="img-wrapper">
+						<span class="work-image-back cc">
+							<link-cedarcrest-back></link-cedarcrest-back>
+						</span>
+						<span class="work-image-front">
+							<link-cedarcrest-front></link-cedarcrest-front>
+						</span>
+					</div>
+					<h3>Cedar Crest Ice Cream</h3>
+				</a>
+			</div>
+		</is-land>
+
+		<is-land on:visible>
+			<div class="work-module">
+				<a href="/work/gauthier/gauthier.webc" class="work-link">
+					<div class="img-wrapper">
+						<span class="work-image-back gb">
+							<link-gauthier-back></link-gauthier-back>
+						</span>
+						<span class="work-image-front">
+							<link-gauthier-front></link-gauthier-front>
+						</span>
+					</div>
+					<h3>Gauthier Biomedical</h3>
+				</a>
+			</div>
+		</is-land>
+		
+	</div>

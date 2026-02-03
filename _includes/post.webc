@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<article class="main-column-wide">
+	<div class="post-column">
+		<h1 @text="title"></h1>
+		<span webc:nokeep @raw="content"></span>
+	</div>
+</article>
+
+<style webc:scoped>
+	:host  {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 55rem !important;
+		/* overflow: hidden; */
+	}
+
+	:host hr {
+		display: inline-block;
+		width: 100%;
+		margin: 1.25em 0;
+		background-color: transparent;
+	}
+</style>

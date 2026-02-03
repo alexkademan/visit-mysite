@@ -1,6 +1,6 @@
 ---js
 function permalink(data) {
-	return "/work/sani-t/";
+	return "/workOLD/sani-t/";
 }
 let title = "Sani-t";
 let section = "work";

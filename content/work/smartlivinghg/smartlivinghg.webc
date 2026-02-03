@@ -1,6 +1,6 @@
 ---js
 function permalink(data) {
-	return "/work/smartlivinghg/";
+	return "/workOLD/smartlivinghg/";
 }
 let title = "Smart Living Home &amp; Garden";
 let section = "work";

@@ -1,6 +1,6 @@
 ---js
 function permalink(data) {
-	return "/work/cedarcrest/";
+	return "/workOLD/cedarcrest/";
 }
 let title = "Cedar Crest Ice Cream";
 let section = "work";

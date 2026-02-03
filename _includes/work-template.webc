@@ -1,0 +1,25 @@
+---js
+{
+	layout: "default",
+	eleventyComputed: {
+		testinfo: (d) => {
+			return 'test title'
+		}
+	}
+}
+---
+<section class="work-page">
+	
+	<h1>something</h1>
+	<h1 :content="pageNumber"></h1>
+	<work-page-header></work-page-header>
+
+	<article class="main-column-wide">
+		<work-page-main :content="content"></work-page-main>
+	</article>
+	<work-page-pagination :previous="previous" :next="next"></work-page-pagination>
+</section>
+
+<style webc:scoped>
+	
+</style>

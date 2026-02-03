@@ -1,0 +1,28 @@
+---js
+{
+	layout: "default",
+	pagination: {
+		data: 'collections.postsByCategory',
+		size: 1,
+		alias: "category",
+	},
+	permalink: (d) => {
+		return d.category.slug;
+	},
+	eleventyComputed: {
+		title: (d) => {
+			return `${d.categories[d.category.name].name} Posts`
+		}
+	},
+	eleventyExcludeFromCollections: true
+}
+---
+<article class="main-column">
+	<h1 @text="title"></h1>
+
+	<category-list></category-list>
+
+	<card-list>
+		<post-card webc:for="post of category.items" :@post="post"></post-card>
+	</card-list>
+</article>

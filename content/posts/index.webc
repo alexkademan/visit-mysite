@@ -1,0 +1,39 @@
+---js
+{
+	layout: "default",
+	title: "Posts",
+	pagination: {
+		data: 'collections.posts',
+		size: 10,
+		alias: "posts",
+		reverse: true,
+	},
+	permalink: (d) => {
+		let result = '/posts/';
+		
+		if (d.pagination.pageNumber > 0) {
+			result += `page-${d.pagination.pageNumber}/`;
+		}
+		return result;
+	},
+	eleventyExcludeFromCollections: true
+}
+---
+<section class="main-column">
+	<h1 @text="title"></h1>
+
+	<category-list></category-list>
+	
+	<card-list>
+		<post-card webc:for="post of posts" :@post="post"></post-card>
+	</card-list>
+</section>
+
+<style webc:scoped>
+
+	:host {
+		display: flex;
+		flex-direction: column;
+	}
+
+</style>

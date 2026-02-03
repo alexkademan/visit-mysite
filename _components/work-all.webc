@@ -2,14 +2,7 @@
 <section class="work-page page-full">
 	<h1 @raw="title" class="page-title visually-hidden"></h1>
 	<div class="work-grid">	
-		<div class="work-module">
-			<a href="/work/hello-honey/hello-honey.webc" class="work-link">
-				<div class="img-wrapper">
-					<img src="/work/images/hello-honey.png" class="work-image" alt="Hello Honey" loading="lazy" />
-				</div>
-				<h3>Hello Honey</h3>
-			</a>
-		</div>		
+			
 		<div class="work-module">
 			<a href="/work/tea-thyme/tea-thyme.webc" class="work-link">
 				<div class="img-wrapper">
