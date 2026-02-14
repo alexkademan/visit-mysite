@@ -1,0 +1,64 @@
+<button id="menu-toggle-button" class="menu-toggle-button">
+	<svg class="hamburger" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 54.0942993 54.0942993">
+		<path d="M51.0942993,14.0064H3c-1.6567383,0-3-1.3432617-3-3s1.3432617-3,3-3h48.0942993c1.6572266,0,3,1.3432617,3,3s-1.3427734,3-3,3Z"/>
+		<path d="M51.0942993,30.0471497H3c-1.6567383,0-3-1.3432617-3-3s1.3432617-3,3-3h48.0942993c1.6572266,0,3,1.3432617,3,3s-1.3427734,3-3,3Z"/>
+		<path d="M51.0942993,46.0878993H3c-1.6567383,0-3-1.3432617-3-3s1.3432617-3,3-3h48.0942993c1.6572266,0,3,1.3432617,3,3s-1.3427734,3-3,3Z"/>
+	</svg>
+</button>
+
+<style webc:scoped>
+	:host {
+		display: block;
+		padding: 0;
+		width: 2.25em;
+		background-color: transparent;
+
+		.menu-toggle-button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: transparent;
+			
+			width: 2.25em;
+			height: 2.25em;
+			border: none;
+			cursor: pointer;
+			padding: 0;
+			
+			.hamburger {
+				fill: var(--brand-500);
+				display: inline-block;
+				margin: 0 auto;
+				width: 40%;
+				height: auto;
+				transition: fill .2s ease-in;
+
+				path {
+					/* transition: opacity 5s ease-out allow-discrete; */
+					opacity: 0;
+					animation: fade 0.4s 5s forwards;
+					animation-timing-function: ease-out;
+				}
+				path:nth-child(1) { animation-delay: .6s; }
+				path:nth-child(2) { animation-delay: .7s; }
+				path:nth-child(3) { animation-delay: .8s; }
+			}
+		}
+
+		.menu-toggle-button:hover {
+			background-color: transparent;
+			.hamburger {
+				fill: var(--brand-100);
+			}
+		}
+	}
+
+	@keyframes fade {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+</style>

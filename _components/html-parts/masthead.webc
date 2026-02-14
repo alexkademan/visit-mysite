@@ -1,0 +1,36 @@
+
+<header class="main-header">
+	<nav class="main-column-wide"  aria-labelledby="main-navigation">
+		<masthead-logo></masthead-logo>
+		<span></span>
+		<masthead-navigation :section="section"></masthead-navigation>
+	</nav>
+</header>
+
+<style webc:scoped>
+
+	:host {
+		width: 100%;
+		display: block;
+		position: relative;
+		background-color: var(--brand-700);
+		border-bottom: .125em solid var(--secondary-500);
+		padding: 0 .5em;
+		
+		.main-column-wide {
+			display: grid;
+			grid-template-columns: 60vw auto 2.25em;
+			padding: 0;
+			align-items: center;
+		}
+	}
+	
+	@media (min-width: 800px) {
+		:host {
+			.main-column-wide {
+				grid-template-columns: 26rem auto 1fr;
+				padding: 0;
+			}
+		}
+	}
+</style>

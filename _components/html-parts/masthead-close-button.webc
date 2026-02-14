@@ -1,0 +1,52 @@
+<button id="menu-modal-close-button" class="close-button">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.094 54.094">
+		<path d="M52.418 44.321a5.725 5.725 0 1 1-8.096 8.097L27.047 35.143 9.773 52.418a5.725 5.725 0 1 1-8.096-8.097l17.274-17.274L1.677 9.773a5.724 5.724 0 1 1 8.096-8.096L27.047 18.95 44.322 1.677a5.725 5.725 0 1 1 8.096 8.096L35.144 27.047z" style="fill:none"/>
+		<path d="M52.418 1.677a5.725 5.725 0 0 0-8.096 0L27.047 18.95 9.773 1.677a5.725 5.725 0 1 0-8.096 8.096L18.95 27.047 1.677 44.321a5.724 5.724 0 1 0 8.096 8.097l17.274-17.275 17.275 17.275a5.725 5.725 0 1 0 8.096-8.097L35.144 27.047 52.418 9.773a5.724 5.724 0 0 0 0-8.096"/>
+	</svg>
+</button>
+
+<style webc:scoped>
+	:host {
+		.close-button {
+			background-color: transparent;
+		}
+
+		position: absolute;
+		top: .5em;
+		right: .5em;
+
+		border: none;
+		cursor: pointer;
+		display: block;
+		padding: 0;
+		width: 2.25em;
+		background-color: transparent;
+
+		.close-button {
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			width: 2.25em;
+			height: 2.25em;
+			border: none;
+			cursor: pointer;
+			padding: 0;
+		}
+
+		svg {
+			fill: var(--brand-500);
+			display: inline-block;
+			margin: 0 auto;
+			width: 30%;
+			height: auto;
+			transition: fill .2s ease-in;
+		}
+	}
+
+	:host:hover {
+		color: var(--brand-300);
+		background-color: transparent;
+	}
+</style>

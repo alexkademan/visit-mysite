@@ -277,7 +277,7 @@ button:hover {
 	display: block;
 	width: 235px;
 	padding: .5em .5em 0;
-	/* background-color: deeppink; */
+	background-color: transparent;
 }
 
 .main-header .home object {

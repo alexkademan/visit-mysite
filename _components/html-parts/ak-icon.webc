@@ -1,0 +1,74 @@
+<div class="badge">
+	<?xml version="1.0" encoding="UTF-8"?>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 54.0943 54.0943" class="masthead-logo-badge1">
+		<path d="M27.04715,0C12.1094212,0,0,12.1094212,0,27.0471721c0,14.9377288,12.1094212,27.04715,27.04715,27.04715s27.04715-12.1094212,27.04715-27.04715C54.0943,12.1094212,41.9848788,0,27.04715,0Z"/>
+	</svg>
+	<?xml version="1.0" encoding="UTF-8"?>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 54.0943 54.0943" class="masthead-logo-badge2">
+		<path d="M27.04715,0C12.1094212,0,0,12.1094212,0,27.0471721c0,14.9377288,12.1094212,27.04715,27.04715,27.04715s27.04715-12.1094212,27.04715-27.04715C54.0943,12.1094212,41.9848788,0,27.04715,0ZM44.1436907,8.0519015l-12.2938439,12.2938881v-.0000221l-.0000221.0000221.3978194-18.3262829c4.5158932.9335528,8.5948343,3.0592389,11.8960465,6.0323948ZM22.1823974,23.9489771h-.0000221v.0000221h-13.4519478s-.0222725-4.3164045,4.4211131-9.5826393c3.6187826-4.2889275,8.9587101-4.6952365,8.9587101-4.6952365,0,0,.045646,11.4699738.0721467,14.2778537ZM13.3854029,46.9814676c-5.9337924-5.6294953-5.1721949-14.5161203-5.1721949-14.5161203h14.0726967c.1219031,8.1395084.2888133,14.3715841.4420535,19.3584166-1.9926306-.3393413-5.6749988-1.3628197-9.3425552-4.8422963ZM42.5990321,47.3237286c-3.2785321,2.5184042-7.1829662,4.259742-11.4422223,4.9484727l.348219-16.042476.0000221.0000221v-.0000442l11.0940033,11.0940033-.0000221.0000221ZM36.4297834,28.8147898l13.3820061-13.3820061v.0000221c1.7820385,3.4857454,2.7937021,7.4307255,2.7937021,11.6143664,0,5.108846-1.5048634,9.8634662-4.0869796,13.8563021l-12.0887286-12.0886844Z" />
+	</svg>
+</div>
+
+<style webc:scoped>
+	:host {
+		.badge {
+			display: inline-block;
+			line-height: 0;
+			padding: 0;
+			position: relative;
+		}
+		.masthead-logo-badge1,
+		.masthead-logo-badge2 {
+			display: inline-block;
+			width: 100%;
+			height: auto;
+			padding: .5rem 0;
+			margin: 0;
+			transition: fill .125s ease-in;
+			fill: var(--brand-500);
+
+			path {
+				opacity: 0;
+				animation: fade 0.5s 350ms forwards;
+				animation-timing-function: ease-out;
+			}
+		}
+
+		.masthead-logo-badge1 {
+			fill: var(--secondary-500);
+			fill: transparent;
+			path { 
+				animation-delay: 100ms;
+				animation-duration: .75s
+			}
+
+		}
+		.masthead-logo-badge2 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			fill: var(--brand-400);
+			animation-delay: 10ms;
+			transition: fill .2s ease-out;
+
+			path {
+				animation: fade 0.5s 50ms forwards;
+				animation-timing-function: ease-out;
+			}
+		}
+
+		.badge:hover {
+			.masthead-logo-badge1 {
+				fill: var(--brand-300);
+			}
+			.masthead-logo-badge2 {
+				fill: var(--brand-700);
+			}
+		}
+	}
+	
+	@media (min-width: 800px) {
+		:host {
+		}
+	}
+</style>

@@ -48,6 +48,7 @@ export default function(eleventyConfig) {
 	eleventyConfig.addCollection('posts', Posts);
 	eleventyConfig.addCollection('postsByCategory', PostsByCategory);
 	eleventyConfig.addCollection('postsByCategoryWork', PostsByCategoryWork);
+	// eleventyConfig.addCollection('postsByCategoryWorkPagination', PostsByCategoryPagination);
 
 	eleventyConfig.addCollection("work", async (collectionsApi) => {
 		// get unsorted items

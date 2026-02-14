@@ -25,6 +25,7 @@ export const PostsByCategoryWork = (collection) => {
 		}
 	}
 
+	
 	const result = [];
 
 	for (const [category, postsInCategory] of categories) {
@@ -74,9 +75,11 @@ export const PostsByCategoryWork = (collection) => {
 			}
 		}
 	}
-
-	for (let i = 0; i < result[0].items.length; i++) {
-		const post = result[0].items[i];
+	// console.log(posts.length);
+	if (result.length > 0) {
+		for (let i = 0; i < result[0].items.length; i++) {
+			const post = result[0].items[i];
+		}
 	}
 
 	return result;

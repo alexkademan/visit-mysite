@@ -2,7 +2,6 @@
 	<div class="whole-width-img-container">
 		<img :src="headerimage" :alt="description" class="hero-image" />
 
-
 		<script webc:type="js" webc:root>
 			let divClass = 'centered-section';
 			if (!headerlogo) {

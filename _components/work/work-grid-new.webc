@@ -1,5 +1,5 @@
 <work-card-list>
-	<work-card webc:for="post of category.items" :@post="post"></work-card>
+	<work-card-vms webc:for="post of category.items" :@post="post"></work-card-vms>
 </work-card-list>
 
 <style webc:scoped>

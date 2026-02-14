@@ -1,0 +1,152 @@
+<ul id="masthead-navigation" class="main-nav">
+	<li>
+		<a href="/">
+			<span webc:if="section === 'work'" class="selected">Work</span>
+			<span webc:else  class="not-selected">Work</span>
+		</a>
+	</li>
+	
+	<li>
+		<a href="resume.webc">
+			<span webc:if="section === 'resume'" class="selected">Résumé</span>
+			<span webc:else  class="not-selected">Résumé</span>
+		</a>
+	</li>	
+</ul>
+<masthead-hamburger-button></masthead-hamburger-button>
+
+<div id="menu-modal-main-nav" class="menu-modal">
+	<masthead-close-button></masthead-close-button>
+	<div class="menu-modal-column">
+		<div class="nav-column">
+			<a href="/" class="home-modal-link" aria-label="Home">
+				<logo-name></logo-name>
+			</a>
+			<span id="menu-modal-nav-column"></span>
+			<social-icons></social-icons>
+		</div>
+	</div>
+</div>
+
+
+<style webc:scoped>
+	:host {
+		display: inline-block;
+		font-family: lato;
+		height: 3em;
+		align-content: center;
+
+		.main-nav {
+			display: none;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+			padding: .3em .5em .75em;
+			opacity: 1;
+			transition: opacity .25s ease-out allow-discrete;
+			animation-name: fade;
+			animation-iteration-count: 1;
+			animation-timing-function: ease-in;
+			animation-duration:.5s;
+			color: var(--brand-400);
+		}
+		a .selected,
+		a .not-selected {
+			padding-bottom: .25em;
+		}
+		a .not-selected {
+			border-color: transparent;
+		}
+
+		a .selected {
+			color: var(--brand-300);
+			border-bottom: 1px var(--brand-300) solid;
+			transition: border-color .25s ease-out allow-discrete;
+		}
+		a:hover,
+		a .selected:hover {
+			color: var(--brand-100);
+			transition: color .25s ease-out allow-discrete;
+		}
+		a .selected:hover {
+			border-color: var(--brand-100);
+		}
+	}
+
+	:host {
+		.menu-modal {
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 100;
+			width: 100%;
+			height: 0;
+			overflow: hidden;
+			background-color: var(--brand-700);
+			color: var(--secondary-500);
+		}
+
+		.menu-modal-column {
+			display: block;
+			position: relative;
+			margin: 5em auto 0;
+			width: 80%;
+		}
+		
+		.modal-on,
+		.modal-off {
+			display: inline-block;
+			width: 100%;
+			height: 100vh;
+			background-color: var(--brand-700);
+			transition: height .1s ease;
+		}
+		.modal-off {
+			height: 0;
+			transition: height .1s ease;
+		}
+
+		.home-modal-link {
+			display; inline-block;
+			width: 100%;
+		}
+	}
+
+	
+	@keyframes blur {
+		0% {
+			opacity: 0;
+			fill: transparent;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+
+	@media only screen and (min-width: 800px) {
+		:host {
+			display: flex;
+			align-items: right;
+			justify-content: center;
+
+			a {
+				font-size: larger;
+			}
+			.main-nav {
+				display: flex;
+				margin-left: auto;
+			}
+
+			.menu-toggle-button {
+				display: none;
+			}
+		}
+	}
+</style>

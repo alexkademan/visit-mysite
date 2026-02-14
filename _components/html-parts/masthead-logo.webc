@@ -1,0 +1,138 @@
+<a href="/" class="home" aria-label="Home">
+	<div class="grid">
+		<div class="badge">
+			<?xml version="1.0" encoding="UTF-8"?>
+			<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.65 68.27">
+				<path d="M0,0v60.54h49.65V0H0ZM46.6,57.59H2.85V2.95h43.74v54.64Z"/>
+				<path d="M14.68,45.72V7.29h3.66v38.43c0,5.37-4.27,7.32-7.2,7.32h-4.54v-3.66l5.09.06-.55-.06c.79,0,3.54-.31,3.54-3.66"/>
+				<path d="M43.05,7.29l-7.44,5.8c6.83,11.35,6.83,27.27,6.83,32.64v1.83h-3.66v-1.83c0-5.06,0-19.89-6.04-30.38l-4.94,3.84v28.37h-3.66V7.29h3.66v7.26l9.27-7.26h5.98Z"/>
+				<rect x="14.62" y="64.54" width="20.42" height="3.72"/>
+			</svg>
+		</div>
+		<div class="name">
+			<logo-name></logo-name>
+		</div>
+	</div>
+</a>
+ 
+<style webc:scoped>
+	:host {
+		display: inline-block;
+
+		.grid {
+			display: grid;
+			position: relative;
+			grid-template-columns: 1fr 6.5fr;
+			gap: .25em;
+			max-width: 26rem;
+			align-content: center;
+			align-items: center;
+		}
+		.name,
+		.badge {
+			display: inline-block;
+			line-height: 0;
+			padding: 0;
+			position: relative;
+		}
+		.badge {
+			transition: all .14s cubic-bezier(.8, 1.76, .32, 1.74);
+
+			svg, rect {
+				fill:  var(--amaranth-purple);
+			}
+		}
+		/* .masthead-logo-badge1,
+		.masthead-logo-badge2 {
+			display: inline-block;
+			width: 100%;
+			height: auto;
+			padding: .5rem 0;
+			margin: 0;
+			transition: fill .125s ease-in;
+			animation-delay: 100ms;
+			animation-duration: .5s;
+
+			path {
+				transition: opacity .25s ease-out allow-discrete;
+				opacity: 0;
+				animation: fade 0.5s 350ms forwards;
+				animation-timing-function: ease-out;
+			}
+		} */
+
+		/* .masthead-logo-badge1 {
+			fill: var(--secondary-500);
+			path { 
+				animation-delay: 100ms;
+				animation-duration: .75s
+			}
+
+		}
+		.masthead-logo-badge2 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			fill: var(--brand-300);
+			animation-delay: 10ms;
+			transition: fill .2s ease-out;
+
+			path {
+				animation: fade 0.5s 50ms forwards;
+				animation-timing-function: ease-out;
+			}
+		} */
+
+		.masthead-logo-name {
+			transition: fill .2s ease-in;
+
+			path, rect {
+				fill:  var(--amaranth-purple);
+				transition: opacity .25s ease-out allow-discrete;
+				opacity: 0;
+				animation: fade 0.75s 350ms forwards;
+				animation-timing-function: ease-out;
+			}
+			/* path:nth-child(1) { animation-delay: 150ms; }
+			path:nth-child(2) { animation-delay: 150ms; }
+			path:nth-child(3) { animation-delay: 150ms; }
+			path:nth-child(4) { animation-delay: 150ms; } */
+		}		
+	}
+
+	:host:hover {
+
+		.masthead-logo-name,
+		.masthead-logo-badge2 {
+			fill: var(--brand-400);
+			fill: white;
+			transition: fill .2s ease-in;
+		}
+
+		.badge {
+			transform: rotate(10deg) scale(1.1);
+		}
+	}
+
+	@keyframes fade {
+		0% {
+			opacity: 0;
+			fill: transparent;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+
+	@media (min-width: 800px) {
+		:host {
+			/* background-color: deeppink; */
+
+			.grid {
+				gap: .75em
+			}
+		}
+	}
+
+</style>

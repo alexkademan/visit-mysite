@@ -27,58 +27,58 @@ export const PostsByCategoryPagination = (collection) => {
 
 	const result = [];
 
-	// for (const [category, postsInCategory] of categories) {
-		
-	// 	const chunks =
-	// 		postsInCategory.length > 0 ? chunk(postsInCategory, size) : [[]];
+	for (const [category, postsInCategory] of categories) {
+		if (category === 'work') {
+			// console.log('postsByCategoryPagination');
+			const chunks =
+				postsInCategory.length > 0 ? chunk(postsInCategory, size) : [[]];
 
-	// 	const categorySlug = `/${POSTS_PATH}/${category}/`;
+			const categorySlug = `/${POSTS_PATH}/${category}/`;
 
-	// 	const slugs = [categorySlug];
-	// 	for (let i = 1; i < chunks.length; i++) {
-	// 		slugs.push(`${categorySlug}page-${i + 1}/`);
-	// 	}
+			const slugs = [categorySlug];
+			for (let i = 1; i < chunks.length; i++) {
+				slugs.push(`${categorySlug}page-${i + 1}/`);
+			}
 
-	// 	for (let i = 0; i < chunks.length; i++) {
-	// 		const chunk = chunks[i];
-			
-	// 		for (let i = 0; i < chunk.length; i++) {
-	// 			let path = chunk[i].filePathStem;
-	// 			// remove "index":
-	// 			path = path.replace(/\/[^/]*$/, '/');
-	// 			// add in the 'img' directory for the work page.
-	// 			const imgPath = `${path}img/`;
-	// 			chunk[i].imgPath = imgPath;
-	// 		}
+			for (let i = 0; i < chunks.length; i++) {
+				const chunk = chunks[i];
+				
+				for (let i = 0; i < chunk.length; i++) {
+					let path = chunk[i].filePathStem;
+					// remove "index":
+					path = path.replace(/\/[^/]*$/, '/');
+					// add in the 'img' directory for the work page.
+					const imgPath = `${path}img/`;
+					chunk[i].imgPath = imgPath;
+				}
 
-	// 		console.log(category);
+				result.push({
+					name: category,
+					slug: slugs[i],
+					items: chunk,
+					pageNumber: i,
+					hrefs: slugs,
+					href: {
+						next: slugs[i + 1] || null,
+						previous: slugs[i - 1] || null,
+						first: slugs[0] || null,
+						last: slugs[slugs.length - 1] || null,
+					},
+					pages: chunks,
+					page: {
+						next: chunks[i + 1] || null,
+						previous: chunks[i - 1] || null,
+						first: chunks[0] || null,
+						last: chunks[chunks.length - 1] || null,
+					},
+				});
+			}
+		}
+	}
 
-	// 		result.push({
-	// 			name: category,
-	// 			slug: slugs[i],
-	// 			pageNumber: i,
-	// 			hrefs: slugs,
-	// 			href: {
-	// 				next: slugs[i + 1] || null,
-	// 				previous: slugs[i - 1] || null,
-	// 				first: slugs[0] || null,
-	// 				last: slugs[slugs.length - 1] || null,
-	// 			},
-	// 			pages: chunks,
-	// 			page: {
-	// 				next: chunks[i + 1] || null,
-	// 				previous: chunks[i - 1] || null,
-	// 				first: chunks[0] || null,
-	// 				last: chunks[chunks.length - 1] || null,
-	// 			},
-	// 		});
-	// 	}
-		
-	// }
-
-	// for (let i = 0; i < result[0].items.length; i++) {
-	// 	const post = result[0].items[i];
-	// }
+	for (let i = 0; i < result[0].items.length; i++) {
+		const post = result[0].items[i];
+	}
 
 	return result;
 };
