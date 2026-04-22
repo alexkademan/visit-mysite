@@ -26,16 +26,17 @@
 		<!-- Google tag (gtag.js) -->
 		<script webc:keep async src="https://www.googletagmanager.com/gtag/js?id=G-2244V623KZ"></script>
 		<script webc:keep>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+			// window.dataLayer = window.dataLayer || [];
+			// function gtag(){dataLayer.push(arguments);}
+			// gtag('js', new Date());
 
-			gtag('config', 'G-2244V623KZ');
+			// gtag('config', 'G-2244V623KZ');
 		</script>
 	</head>
 	<body>
+		
 		<masthead :section="section"></masthead>
-		<div  @attributes="({ class: section+' white-bg' })">
+		<div @attributes="({ class: section+' white-bg' })">
 			<main @raw="content"></main>
 		</div>
 

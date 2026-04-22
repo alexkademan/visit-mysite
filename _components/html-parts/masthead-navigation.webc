@@ -1,3 +1,4 @@
+
 <ul id="masthead-navigation" class="main-nav">
 	<li>
 		<a href="/">
@@ -77,9 +78,7 @@
 		a .selected:hover {
 			border-color: var(--brand-100);
 		}
-	}
-
-	:host {
+		
 		.menu-modal {
 			position: fixed;
 			left: 0;

@@ -1,37 +1,62 @@
-<is-land on:visible>
-	<div class="whole-width-img-container">
-		<img :src="headerimage" :alt="description" class="hero-image" />
+<is-land on:visible>				
+	<script webc:type="js" webc:root>
+		const fs = require('fs');
+		const cwd = process.cwd(); // current working directory
+		const postLocation = page.inputPath.replace(/\/[^\/]*$/, "/");
+		const postPath = cwd + postLocation.replace(/^\./, "");
 
-		<script webc:type="js" webc:root>
-			let divClass = 'centered-section';
-			if (!headerlogo) {
-				divClass = 'centered-section shadow';
-			}
-			`<div class="${divClass}">
+		let titleClass = 'centered-section';
+		
+		const isSVGregex = /\.svg$/i;
+		let headerBackground = false;
+		
+		if (isSVGregex.test(headerimage)) {
+			headerBackground = fs.readFileSync(postPath + headerimage, 'utf8');
+		} else {
+			headerBackground = '<img :src="headerimage" :alt="description" class="header-background" />';
+		}
+
+		if (isSVGregex.test(headerlogo)) {
+			headerLogoImg = fs.readFileSync(postPath + headerlogo, 'utf8');
+		} else {
+			headerLogoImg = '<img :src="headerlogo" :alt="title" loading="lazy" class="bg-image" />';
+		}
+
+		`<div class="whole-width-img-container">
+			${headerBackground}
+			<div class="${titleClass}">
 				<div class="main-column-wide">
 					<h1 @text="title"></h1>
 				</div>
-			</div>`;
-		</script>
-
-		<div class="header-logo-svg" webc:if="headerlogo">
-			<div class="center-svg">
-				<div class="big-logo">
-					<script webc:type="js" webc:root>
-						`<img src="${headerlogo}" alt="${title}" loading="lazy">`;
-					</script>
+			</div>
+			<div class="header-logo-svg" webc:if="headerlogo">
+				<div class="center-svg">
+					<div class="big-logo">
+						${headerLogoImg}
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div>`;
+	</script>
 </is-land>
 
 <style webc:scoped>
 
-	@keyframes fadeInOpacity {
+	@keyframes fadeInBackground {
 		0% {
 			opacity: 0;
-			filter: blur(2em);
+			filter: blur(3em);
+		}
+		100% {
+			opacity: 1;
+			filter: blur(0);
+		}
+	}
+
+	@keyframes fadeInLogo {
+		0% {
+			opacity: 0;
+			filter: blur(.5em);
 			scale: 0.85;
 		}
 		100% {
@@ -43,11 +68,9 @@
 
 	:host {
 		display: block;
-		line-height: 0;
-		
+		line-height: 0;		
 		display: inline-block;
 		width: 100%;
-		
 
 		.whole-width-img-container {
 			display: flex;
@@ -60,6 +83,21 @@
 			overflow: hidden;
 		}
 
+		.whole-width-img-container > svg,
+		.header-background {
+			animation-name: fadeInBackground;
+			animation-iteration-count: 1;
+			animation-timing-function: ease-out;
+			animation-duration: .5s;
+		}
+
+		.big-logo > svg {
+			animation-name: fadeInLogo;	
+			animation-iteration-count: 1;
+			animation-timing-function: ease-out;
+			animation-duration: 1s;
+		}
+
 		img {
 			display: block;
 			width: 100%;
@@ -70,6 +108,7 @@
 			position: absolute;
 			bottom: 0;
 			width: 100%;
+			z-index: 100;
 		}
 
 		.shadow:before {
@@ -119,16 +158,6 @@
 				left: 0;
 				top: 0;
 				width: 100%;
-			}
-
-			img {
-				display: block;
-				width: 100%;
-				filter: drop-shadow(0 0 .5em white);
-				animation-name: fadeInOpacity;
-				animation-iteration-count: 1;
-				animation-timing-function: ease-out;
-				animation-duration: 1s;
 			}
 		}
 	}

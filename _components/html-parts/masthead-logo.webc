@@ -22,7 +22,7 @@
 		.grid {
 			display: grid;
 			position: relative;
-			grid-template-columns: 1fr 6.5fr;
+			grid-template-columns: 1fr 5.25fr;
 			gap: .25em;
 			max-width: 26rem;
 			align-content: center;
@@ -37,11 +37,16 @@
 		}
 		.badge {
 			transition: all .14s cubic-bezier(.8, 1.76, .32, 1.74);
+			/* background-color: lightgray; */
+
+			padding: .5em 0;
 
 			svg, rect {
 				fill:  var(--amaranth-purple);
+				fill: var(--accent-600);
 			}
 		}
+
 		/* .masthead-logo-badge1,
 		.masthead-logo-badge2 {
 			display: inline-block;
@@ -87,16 +92,25 @@
 			transition: fill .2s ease-in;
 
 			path, rect {
-				fill:  var(--amaranth-purple);
+				fill: var(--accent-600);
 				transition: opacity .25s ease-out allow-discrete;
 				opacity: 0;
-				animation: fade 0.75s 350ms forwards;
+				animation: fade 0.75s 100ms forwards;
 				animation-timing-function: ease-out;
 			}
-			/* path:nth-child(1) { animation-delay: 150ms; }
-			path:nth-child(2) { animation-delay: 150ms; }
-			path:nth-child(3) { animation-delay: 150ms; }
-			path:nth-child(4) { animation-delay: 150ms; } */
+			/* path:nth-child(6) { animation-delay: 400ms; }
+			path:nth-child(7) { animation-delay: 400ms; }
+			path:nth-child(8) { animation-delay: 400ms; }
+			path:nth-child(9) { animation-delay: 400ms; }
+			path:nth-child(10) { animation-delay: 400ms; } */
+
+			.fast {
+				animation-delay: 200ms;
+			}
+
+			.slow {
+				animation-delay: 400ms;
+			}
 		}		
 	}
 

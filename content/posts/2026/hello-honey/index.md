@@ -8,9 +8,9 @@ category: work
 section: work
 permalink: /work/hello-honey/
 layout: work-template.webc
-date: 2026-01-20T12:00:00.000Z
-headerimage: img/fountain-fresh-header.jpg
-headerlogo: img/fountain-fresh-header-logo.svg
+date: 2026-01-24T12:00:00.000Z
+headerimage: img/header-hello-honey-background.svg
+headerlogo: img/header-hello-honey.svg
 previous: {
 	title: this is a test.. euh...,
 	url: /work/pebblelaneliving/
@@ -18,10 +18,6 @@ previous: {
 next: {
 	title: Sani-t,
 	url: /work/sani-t/
-}
-pagination: {
-  data: collections.posts,
-  size: 100,
 }
 ---
 
@@ -31,7 +27,7 @@ pagination: {
 
 ## Lead Designer
 
-# Logo Design,<br />Packaging,<br />+ Branding
+# Work that I did,<br />Design,<br />+ Branding
 
 </div>
 <div class="right">

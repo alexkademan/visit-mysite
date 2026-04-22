@@ -35,10 +35,7 @@ eleventyImport:
 			<nav class="main-column-wide"  aria-labelledby="main-navigation">
 				<masthead :section="section"></masthead>
 			</nav>
-		</header>
-
-		
-  
+		</header>  
 
 		<!-- <h1 class="main-column" @text="metadata.description"></h1> -->
 		<div  @attributes="({ class: section+' white-bg' })">

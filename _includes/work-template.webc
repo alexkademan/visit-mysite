@@ -8,15 +8,14 @@
 	}
 }
 ---
+
 <section class="work-page">
 	<work-page-header></work-page-header>
 
 	<article class="main-column-wide">
 		<work-page-main :content="content"></work-page-main>
 	</article>
+	
 	<work-page-pagination :previous="previous" :next="next"></work-page-pagination>
 </section>
 
-<style webc:scoped>
-	
-</style>

@@ -1,4 +1,3 @@
-
 <header class="main-header">
 	<nav class="main-column-wide"  aria-labelledby="main-navigation">
 		<masthead-logo></masthead-logo>
@@ -8,13 +7,14 @@
 </header>
 
 <style webc:scoped>
-
 	:host {
 		width: 100%;
 		display: block;
 		position: relative;
-		background-color: var(--brand-700);
+		/* background-color: var(--brand-700); */
+		/* background-color: blue !important; */
 		border-bottom: .125em solid var(--secondary-500);
+		border-bottom: .125em solid var(--accent-600);
 		padding: 0 .5em;
 		
 		.main-column-wide {
@@ -28,7 +28,7 @@
 	@media (min-width: 800px) {
 		:host {
 			.main-column-wide {
-				grid-template-columns: 26rem auto 1fr;
+				grid-template-columns: 18rem auto 1fr;
 				padding: 0;
 			}
 		}
