@@ -9,6 +9,7 @@ import { PostsByCategory } from './_collections/posts-by-category.js';
 import { PostsByCategoryWork } from './_collections/posts-by-category-work.js';
 // import { PostsByCategoryPagination } from './_collections/posts-by-category-pagination.js';
 import { Posts } from './_collections/posts.js';
+// import { GetImageTypeForTemplate } from './_collections/get-image-type-for-template.js';
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function(eleventyConfig) {

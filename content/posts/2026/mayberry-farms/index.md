@@ -1,7 +1,7 @@
 ---
 title: Mayberry Farms
 description: Logo Design, Branding, Packaging
-cardforeground: tea-thyme.png
+cardforeground: mayberry-farms-logo.svg
 cardbackground: link-fountain-fresh-back.svg
 bgcolor: rgb(0, 142, 128)
 category: work

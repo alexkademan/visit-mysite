@@ -11,21 +11,7 @@
 	eleventyExcludeFromCollections: true
 }
 ---
-<script webc:type="js">
-	console.log(category.items.length);
 
-	console.log('\n');
-	console.log('content/index.webc');
-	for (let i = 0; i < pagination.items.length; i++) {
-		// console.log(pagination.items[i].pages);
-	}
-	console.log('\n');
-	for (let i = 0; i < category.items.length; i++) {
-		// console.log(category.items[i].template.inputPath);
-		console.log(category.items[i].template.fileSlugStr);
-	}
-	console.log('\n');
-</script>
 <div class="home-title">
 	<div class="main-column-wide">
 
@@ -47,7 +33,6 @@
 	</div>
 </div>
 <work-grid-new :pagination="pagination"></work-grid-new>
-<work-all></work-all>
 
 <style>
 

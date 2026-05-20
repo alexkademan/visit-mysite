@@ -1,0 +1,24 @@
+
+<script webc:type="js">
+	const fs = require('fs');
+	const cwd = process.cwd(); // current working directory
+	const isSVGregex = /\.svg$/i;
+
+	let output = '';
+
+	if (isSVGregex.test(path)) {
+		// image is a .svg
+		const svgImg = fs.readFileSync(cwd + '/content' + path);
+		output = `<div class="${classname}">${svgImg}</div>`;
+
+	} else {
+		output = `<img src="${path}" alt="${alt}" class="${classname}" />`;
+	}
+
+	`${output}`;
+</script>
+
+<style webc:scoped>
+	:host {
+	}
+</style>

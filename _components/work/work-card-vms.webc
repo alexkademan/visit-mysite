@@ -1,8 +1,11 @@
 <script webc:type="js">
+	const imgLocation = post.imgPath + post.data.cardforeground;
+	console.log(imgLocation);
+
 	`<card>
 		<a webc:root="override" :href="post.page.url" :aria-label="post.data.title">
 			<div class="img-wrapper" style="background-color: ${post.data.bgcolor}">
-				<img src="${post.imgPath}${post.data.cardforeground}" alt="${post.data.title}" class="work-image work-image-front" />
+				<image-element path="${imgLocation}" alt="${post.data.title}" classname="work-image work-image-front" />
 			</div>
 			<hgroup>
 				<h2 @text="post.data.title"></h2>

@@ -20,17 +20,18 @@
 	--amaranth-purple: #9F2042;
 	--lavender-blush: #F8E5EE;
 
-	--brand-050: #fdf2e8;
-	--brand-100: #fbe3cf;
-	--brand-200: #f8d3b3;
-	--brand-300: #f5c194;
-	--brand-400: #ec862d;
-	--brand-500: #c46512;
-	--brand-600: #974e0e;
-	--brand-700: #6c370a;
-	--brand-800: #3d1f05;
-	--brand-900: #291504;
-	--brand-950: #190d02;	
+	--primary-050: #fdf2e8;
+	--primary-100: #fbe3cf;
+	--primary-200: #f8d3b3;
+	--primary-300: #f5c194;
+	--primary-400: #ec862d;
+	--primary-500: #c46512;
+	--primary-600: #974e0e;
+	--primary-700: #6c370a;
+	--primary-800: #3d1f05;
+	--primary-900: #291504;
+	--primary-950: #190d02;
+
 	--secondary-050: #fdf1ee;
 	--secondary-100: #fae2dc;
 	--secondary-200: #f8d2c8;
@@ -42,6 +43,7 @@
 	--secondary-800: #48160a;
 	--secondary-900: #310f06;
 	--secondary-950: #1f0a04;
+
 	--tertiary-050: #fdf0f2;
 	--tertiary-100: #fce1e5;
 	--tertiary-200: #facfd6;
@@ -53,6 +55,7 @@
 	--tertiary-800: #510814;
 	--tertiary-900: #38060e;
 	--tertiary-950: #250409;
+
 	--accent-050: #fcf1f4;
 	--accent-100: #f9e1e8;
 	--accent-200: #f6d1da;
@@ -64,6 +67,7 @@
 	--accent-800: #4c0f20;
 	--accent-900: #340a15;
 	--accent-950: #21070e;
+
 	--neutral-060: #fbf1f6;
 	--neutral-100: #f7e2ec;
 	--neutral-200: #f3d1e1;
@@ -75,7 +79,6 @@
 	--neutral-800: #47132c;
 	--neutral-900: #300d1e;
 	--neutral-950: #1e0813;
-
 }
 ::-moz-selection {
 	color: var(--lavender-blush);
@@ -137,9 +140,11 @@ body {
 	scrollbar-color: var(--deep-slate-blue)var(--muted-sage-green);
 	scrollbar-color: var(--amaranth-purple)var(--lavender-blush);
 	scrollbar-color: var(--deep-slate-blue)white;
+	color-scheme: light;
 }
 html {
 	overflow-y: scroll;
+	color-scheme: light dark;
 }
 
 a,
