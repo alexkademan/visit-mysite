@@ -1,21 +1,61 @@
-
 <script webc:type="js">
-	const fs = require('fs');
-	const cwd = process.cwd(); // current working directory
-	const isSVGregex = /\.svg$/i;
+	// console.log("image-element.webc");
+	// console.log(path);
+	// console.log(fullpath);
+	// console.log(alt);
+	// console.log(classname);
+	// console.log(" ");
 
 	let output = '';
+	let type = false;
+	
+	const renderImage = (() => {
+		const fs = require('fs');
+		const isSVGregex = /\.svg$/i;
 
-	if (isSVGregex.test(path)) {
-		// image is a .svg
-		const svgImg = fs.readFileSync(cwd + '/content' + path);
-		output = `<div class="${classname}">${svgImg}</div>`;
+		post ? type = 'post' : type = 'PAGE';
+		if (type === 'PAGE') {
+			// was being used to test for when 11ty is rendering a page and not a post
+			
+			
+			if (isSVGregex.test(path)) {
+				console.log(path);
+			}
+			// if (isSVGregex.test(path)) {
+			// 	const svgImg = fs.readFileSync(fullpath, 'utf8');
+			// 	if (svgImg) {
+			// 		console.log(path);
+			// 		console.log(fullpath);
+			// 		console.log(" ");
 
+			// 	} else {
+			// 		console.log('stopping now');
+			// 	}
+			// }
+		} else {
+			// post and not a page.
+
+			
+		}
+
+		if (isSVGregex.test(path)) {
+			const svgImg = fs.readFileSync(fullpath, 'utf8');
+			output = `<div class="${classname}">${svgImg}</div>`;
+
+		} else {
+			output = `<img src="${path}" alt="${alt}" loading="lazy" class="${classname}" />`;
+		}
+		
+	});
+
+
+	if (path && fullpath && alt && classname) {
+		renderImage();
 	} else {
-		output = `<img src="${path}" alt="${alt}" class="${classname}" />`;
+		// console.log('image-element.webc is missing required variables');
 	}
 
-	`${output}`;
+	`${output}`
 </script>
 
 <style webc:scoped>

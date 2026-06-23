@@ -1,11 +1,23 @@
 <script webc:type="js">
-	const imgLocation = post.imgPath + post.data.cardforeground;
-	console.log(imgLocation);
+	let foregroundImage = post.imgPath + post.data.cardforeground;
+	const cwd = process.cwd(); // current working directory
+	const fullImgPath = cwd + '/' + post.imgPathFull + post.data.cardforeground;
+
+	// console.log("work-card-vms.webc");
+	// // console.log(cwd + '/' + post.imgPathFull);
+	// console.log(foregroundImage);
+	// console.log(fullImgPath);
+	// console.log(" ");
 
 	`<card>
 		<a webc:root="override" :href="post.page.url" :aria-label="post.data.title">
 			<div class="img-wrapper" style="background-color: ${post.data.bgcolor}">
-				<image-element path="${imgLocation}" alt="${post.data.title}" classname="work-image work-image-front" />
+				<image-element 
+					path="${foregroundImage}"
+					fullpath="${fullImgPath}"
+					alt="${post.data.title}"
+					classname="work-image work-image-front" 
+				/>
 			</div>
 			<hgroup>
 				<h2 @text="post.data.title"></h2>

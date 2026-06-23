@@ -5,8 +5,6 @@
 		const postLocation = page.inputPath.replace(/\/[^\/]*$/, "/");
 		const postPath = cwd + postLocation.replace(/^\./, "");
 
-
-		let titleClass = 'centered-section';
 		
 		const isSVGregex = /\.svg$/i;
 		let headerBackground = false;
@@ -17,25 +15,44 @@
 			headerBackground = '<img :src="headerimage" :alt="description" class="header-background" />';
 		}
 
-		if (isSVGregex.test(headerlogo)) {
-			headerLogoImg = fs.readFileSync(postPath + headerlogo, 'utf8');
-		} else {
-			headerLogoImg = '<img :src="headerlogo" :alt="title" loading="lazy" class="bg-image" />';
-		}
-
 		`<div class="whole-width-img-container">
 			${headerBackground}
-			
-			<div class="${titleClass}">
+			<div class="centered-section">
 				<div class="main-column-wide">
 					<h1 @text="title"></h1>
 				</div>
 			</div>
 			<div class="header-logo-svg" webc:if="headerlogo">
 				<div class="center-svg">
-					<div class="big-logo">
-						${headerLogoImg}
-					</div>
+					<image-element 
+						path="${headerlogo}" 
+						fullpath="${postPath}${headerlogo}"
+						alt="${title}" 
+						classname="big-logo" 
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="whole-width-img-container">
+			<image-element 
+				path="${headerBackground}" 
+				fullpath="${postPath}${headerBackground}"
+				alt="${title}" 
+				classname="" 
+			/>
+			<div class="centered-section">
+				<div class="main-column-wide">
+					<h1 @text="title"></h1>
+				</div>
+			</div>
+			<div class="header-logo-svg" webc:if="headerlogo">
+				<div class="center-svg">
+					<image-element 
+						path="${headerlogo}" 
+						fullpath="${postPath}${headerlogo}"
+						alt="${title}" 
+						classname="big-logo" 
+					/>
 				</div>
 			</div>
 		</div>`;

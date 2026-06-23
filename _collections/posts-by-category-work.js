@@ -45,11 +45,16 @@ export const PostsByCategoryWork = (collection) => {
 				
 				for (let i = 0; i < chunk.length; i++) {
 					let path = chunk[i].filePathStem;
+					let fullPath = chunk[i].inputPath;
+					const noIndex = /\/[^/]*$/;
+					
 					// remove "index":
-					path = path.replace(/\/[^/]*$/, '/');
+					path = path.replace(noIndex, '/');
+					fullPath = fullPath.replace(noIndex, '/');
+					
 					// add in the 'img' directory for the work page.
-					const imgPath = `${path}img/`;
-					chunk[i].imgPath = imgPath;
+					chunk[i].imgPath = `${path}img/`;
+					chunk[i].imgPathFull = `${fullPath}img/`;
 				}
 
 				result.push({

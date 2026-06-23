@@ -9,6 +9,7 @@ section: work
 permalink: /work/miss-kims/
 layout: work-template.webc
 date: 2026-01-22T12:00:00.000Z
+imgDir: img
 headerimage: img/header-miss-kims-background.svg
 headerlogo: img/header-miss-kims.svg
 previous: {
