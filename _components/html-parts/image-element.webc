@@ -18,20 +18,6 @@
 			// was being used to test for when 11ty is rendering a page and not a post
 			
 			
-			if (isSVGregex.test(path)) {
-				console.log(path);
-			}
-			// if (isSVGregex.test(path)) {
-			// 	const svgImg = fs.readFileSync(fullpath, 'utf8');
-			// 	if (svgImg) {
-			// 		console.log(path);
-			// 		console.log(fullpath);
-			// 		console.log(" ");
-
-			// 	} else {
-			// 		console.log('stopping now');
-			// 	}
-			// }
 		} else {
 			// post and not a page.
 

@@ -34,12 +34,7 @@
 			</div>
 		</div>
 		<div class="whole-width-img-container">
-			<image-element 
-				path="${headerBackground}" 
-				fullpath="${postPath}${headerBackground}"
-				alt="${title}" 
-				classname="" 
-			/>
+			<image-element path="${headerBackground}" fullpath="${postPath}${headerBackground}" alt="${title}" classname="none" />
 			<div class="centered-section">
 				<div class="main-column-wide">
 					<h1 @text="title"></h1>
