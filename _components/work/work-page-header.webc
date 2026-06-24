@@ -5,18 +5,15 @@
 		const postLocation = page.inputPath.replace(/\/[^\/]*$/, "/");
 		const postPath = cwd + postLocation.replace(/^\./, "");
 
-		
-		const isSVGregex = /\.svg$/i;
-		let headerBackground = false;
-		
-		if (isSVGregex.test(headerimage)) {
-			headerBackground = fs.readFileSync(postPath + headerimage, 'utf8');
-		} else {
-			headerBackground = '<img :src="headerimage" :alt="description" class="header-background" />';
-		}
-
 		`<div class="whole-width-img-container">
-			${headerBackground}
+			<span class="header-background">
+				<image-element 
+					@path="${headerimage}"
+					@fullpath="${postPath + headerimage}" 
+					@alt="${title}"
+					@classname="background"
+				/>
+			</span>
 			<div class="centered-section">
 				<div class="main-column-wide">
 					<h1 @text="title"></h1>
@@ -25,28 +22,10 @@
 			<div class="header-logo-svg" webc:if="headerlogo">
 				<div class="center-svg">
 					<image-element 
-						path="${headerlogo}" 
-						fullpath="${postPath}${headerlogo}"
-						alt="${title}" 
-						classname="big-logo" 
-					/>
-				</div>
-			</div>
-		</div>
-		<div class="whole-width-img-container">
-			<image-element path="${headerBackground}" fullpath="${postPath}${headerBackground}" alt="${title}" classname="none" />
-			<div class="centered-section">
-				<div class="main-column-wide">
-					<h1 @text="title"></h1>
-				</div>
-			</div>
-			<div class="header-logo-svg" webc:if="headerlogo">
-				<div class="center-svg">
-					<image-element 
-						path="${headerlogo}" 
-						fullpath="${postPath}${headerlogo}"
-						alt="${title}" 
-						classname="big-logo" 
+						@path="${headerlogo}" 
+						@fullpath="${postPath + headerlogo}"
+						@alt="${title}" 
+						@classname="big-logo" 
 					/>
 				</div>
 			</div>
@@ -85,6 +64,7 @@
 		line-height: 0;		
 		display: inline-block;
 		width: 100%;
+		position: relative;
 
 		.whole-width-img-container {
 			display: flex;
@@ -97,7 +77,13 @@
 			overflow: hidden;
 		}
 
-		.whole-width-img-container > svg,
+		.header-background {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+		
 		.header-background {
 			animation-name: fadeInBackground;
 			animation-iteration-count: 1;

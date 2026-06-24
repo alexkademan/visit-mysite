@@ -1,28 +1,9 @@
 <script webc:type="js">
-	// console.log("image-element.webc");
-	// console.log(path);
-	// console.log(fullpath);
-	// console.log(alt);
-	// console.log(classname);
-	// console.log(" ");
-
 	let output = '';
-	let type = false;
 	
 	const renderImage = (() => {
 		const fs = require('fs');
 		const isSVGregex = /\.svg$/i;
-
-		post ? type = 'post' : type = 'PAGE';
-		if (type === 'PAGE') {
-			// was being used to test for when 11ty is rendering a page and not a post
-			
-			
-		} else {
-			// post and not a page.
-
-			
-		}
 
 		if (isSVGregex.test(path)) {
 			const svgImg = fs.readFileSync(fullpath, 'utf8');
@@ -34,11 +15,14 @@
 		
 	});
 
-
 	if (path && fullpath && alt && classname) {
 		renderImage();
 	} else {
-		// console.log('image-element.webc is missing required variables');
+		console.log('image-element.webc is missing required variables');
+		// console.log(path);
+		// console.log(fullpath);
+		// console.log(alt);
+		// console.log(classname);
 	}
 
 	`${output}`

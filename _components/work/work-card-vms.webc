@@ -13,10 +13,10 @@
 		<a webc:root="override" :href="post.page.url" :aria-label="post.data.title">
 			<div class="img-wrapper" style="background-color: ${post.data.bgcolor}">
 				<image-element 
-					path="${foregroundImage}"
-					fullpath="${fullImgPath}"
-					alt="${post.data.title}"
-					classname="work-image work-image-front" 
+					@path="${foregroundImage}"
+					@fullpath="${fullImgPath}"
+					@alt="${post.data.title}"
+					@classname="work-image work-image-front" 
 				/>
 			</div>
 			<hgroup>
