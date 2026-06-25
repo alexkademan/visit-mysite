@@ -6,16 +6,15 @@
 		const isSVGregex = /\.svg$/i;
 
 		if (isSVGregex.test(path)) {
-			const svgImg = fs.readFileSync(fullpath, 'utf8');
-			output = `<div class="${classname}">${svgImg}</div>`;
+			output = fs.readFileSync(fullpath, 'utf8');
 
 		} else {
-			output = `<img src="${path}" alt="${alt}" loading="lazy" class="${classname}" />`;
+			output = `<img src="${path}" alt="${alt}" loading="lazy" />`;
 		}
 		
 	});
 
-	if (path && fullpath && alt && classname) {
+	if (path && fullpath && alt) {
 		renderImage();
 	} else {
 		console.log('image-element.webc is missing required variables');

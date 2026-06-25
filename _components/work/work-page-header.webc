@@ -11,7 +11,6 @@
 					@path="${headerimage}"
 					@fullpath="${postPath + headerimage}" 
 					@alt="${title}"
-					@classname="background"
 				/>
 			</span>
 			<div class="centered-section">
@@ -21,12 +20,13 @@
 			</div>
 			<div class="header-logo-svg" webc:if="headerlogo">
 				<div class="center-svg">
-					<image-element 
-						@path="${headerlogo}" 
-						@fullpath="${postPath + headerlogo}"
-						@alt="${title}" 
-						@classname="big-logo" 
-					/>
+					<div class="big-logo">
+						<image-element 
+							@path="${headerlogo}" 
+							@fullpath="${postPath + headerlogo}"
+							@alt="${title}"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>`;
